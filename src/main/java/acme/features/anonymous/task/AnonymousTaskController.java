@@ -12,7 +12,7 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/anonymous/taskNotEnded")
+@RequestMapping("/anonymous/task")
 public class AnonymousTaskController extends AbstractController<Anonymous, Task> {
 	
 	@Autowired

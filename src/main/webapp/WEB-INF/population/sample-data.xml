@@ -30,7 +30,7 @@
 		<property name="workload" value="0.2"/>
 		<property name="description" value="This is the oldest announcement in the system."/>	
 		<property name="optionalLink" value="http://www.sample-app.com"/>
-		<property name="visibility" value="PRIVATE"/>
+		<property name="visibility" value="Private"/>
 	</bean>
 	
 	<bean id="task02" class="acme.entities.tasks.Task">
@@ -40,7 +40,7 @@
 		<property name="workload" value="1.2"/>
 		<property name="description" value="This is the oldest announcement in the system."/>	
 		<property name="optionalLink" value="http://www.sample-app.com"/>
-		<property name="visibility" value="PUBLIC"/>		
+		<property name="visibility" value="Public"/>		
 	</bean>
 	
 		<bean id="task03" class="acme.entities.tasks.Task">
@@ -50,7 +50,7 @@
 		<property name="workload" value="3.0"/>
 		<property name="description" value="This is the oldest announcement in the system."/>	
 		<property name="optionalLink" value="http://www.sample-app.com"/>
-		<property name="visibility" value="PUBLIC"/>
+		<property name="visibility" value="Public"/>
 	</bean>
 		
 

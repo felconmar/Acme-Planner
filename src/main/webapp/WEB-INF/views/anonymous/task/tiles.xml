@@ -11,9 +11,5 @@
 			value="../anonymous/task/list.jsp" />
 	</definition>
 
-	<definition name="anonymous/taskNotEnded/list" extends="master">
-		<put-attribute name="body" type="template"
-			value="../anonymous/task/listNotEnded.jsp" />
-	</definition>
 
 </tiles-definitions>
