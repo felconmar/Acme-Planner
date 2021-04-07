@@ -28,9 +28,12 @@ public class Task extends DomainEntity{
 	@Length(min = 2, max = 80)
 	protected String title;
 	
+	@NotBlank
+	protected String visibility;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-
+	@Future
 	protected Date				startDate;
 
 	
@@ -41,7 +44,7 @@ public class Task extends DomainEntity{
 	
 	@Digits(integer = 2, fraction = 2)
 	protected Double workload;
-	@Future
+
 	@NotBlank
 	@Length(min = 8, max = 500)
 	protected String description;
@@ -49,7 +52,7 @@ public class Task extends DomainEntity{
 	@URL
 	protected String optionalLink;
 	
-	protected Visibility visibility;
+
 	
 	
 	
