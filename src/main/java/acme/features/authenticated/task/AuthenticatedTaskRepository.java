@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 public interface AuthenticatedTaskRepository extends AbstractRepository {
 
 	@Query("select t from Task t where t.endDate < CURRENT_TIMESTAMP")
-	Collection<Task> findEndedTask();
+	Collection<Task> findEndedTasks();
 
 	@Query("select t from Task t")
 	Collection<Task> findMany();
