@@ -33,6 +33,11 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.create-shout = Shout!
 master.menu.anonymous.list-task-not-ended = List tasks not ended
 
+# master.menu.autheticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.list-task-ended = List tasks ended
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
