@@ -1,0 +1,7 @@
+authenticated.task.list.label.title = Titulo
+authenticated.task.list.label.startDate = Fecha de comienzo
+authenticated.task.list.label.endDate = Fecha de fin
+authenticated.task.list.label.workload = Carga de trabajo
+authenticated.task.list.label.description = Descripcion
+authenticated.task.list.label.optionalLink = Enlace opcional
+authenticated.task.list.label.visibility = Visibilidad
