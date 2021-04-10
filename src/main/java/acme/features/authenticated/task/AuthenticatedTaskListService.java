@@ -37,7 +37,7 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 	public Collection<Task> findMany(final Request<Task> request) {
 		assert request != null;
 		Collection<Task> result;
-		result = this.repository.findNotEndedTask();
+		result = this.repository.findEndedTask();
 		return result;
 	}
 }

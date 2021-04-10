@@ -36,7 +36,7 @@ master.menu.anonymous.list-task-not-ended = Lista de tareas no terminadas
 # master.menu.autheticated #######################################################
 
 master.menu.authenticated = Autenticado
-master.menu.authenticated.list-task-not-ended = Lista de tareas no terminadas
+master.menu.authenticated.list-task-ended = Lista de tareas terminadas
 
 # master.menu.administrator ###################################################
 
