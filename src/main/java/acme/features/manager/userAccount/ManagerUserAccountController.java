@@ -1,5 +1,5 @@
 /*
- * AdministratorUserAccountController.java
+ 
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.administrator.userAccount;
+package acme.features.manager.userAccount;
 
 import javax.annotation.PostConstruct;
 
@@ -18,39 +18,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.entities.roles.Manager;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Administrator;
 import acme.framework.entities.UserAccount;
 
 @Controller
-@RequestMapping("/administrator/user-account/")
-public class AdministratorUserAccountController extends AbstractController<Administrator, UserAccount> {
+@RequestMapping("/manager/user-account/")
+public class ManagerUserAccountController extends AbstractController<Manager, UserAccount> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorUserAccountListService	listService;
-
-	@Autowired
-	protected AdministratorUserAccountShowService	showService;
-
-	@Autowired
-	protected AdministratorUserAccountUpdateService	updateService;
+	protected ManagerUserAccountCreateService createService;
 	
 	@Autowired
-	protected AdministratorUserAccountCreateService	createService;
-
+	protected ManagerUserAccountListService	listService;
 
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
-		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 
 }
