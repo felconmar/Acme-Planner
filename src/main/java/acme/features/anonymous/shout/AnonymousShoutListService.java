@@ -12,7 +12,15 @@
 
 package acme.features.anonymous.shout;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,15 +58,33 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 		request.unbind(entity, model, "author", "text", "moment");
 	}
 
+	
+
 	@Override
 	public Collection<Shout> findMany(final Request<Shout> request) {
 		assert request != null;
 
 		Collection<Shout> result;
+		final List<Shout> list = new ArrayList<Shout>();
+		result = this.repository.findMany().stream().collect(Collectors.toList());
+		
+		for(final Shout s: result) {			
+			if (Period.between(this.convertToLocalDateViaMilisecond(s.getMoment()),LocalDate.now() ).getMonths()<1 && Period.between(this.convertToLocalDateViaMilisecond(s.getMoment()),LocalDate.now() ).getYears()<1) {
+				list.add(s);
+				
+			}		
+			}
 
-		result = this.repository.findMany();
-
-		return result;
+		return list;
+		
+			
+			
+	
+	}
+	public LocalDate convertToLocalDateViaMilisecond(final Date dateToConvert) {
+	    return Instant.ofEpochMilli(dateToConvert.getTime())
+	      .atZone(ZoneId.systemDefault())
+	      .toLocalDate();
 	}
 
 }
