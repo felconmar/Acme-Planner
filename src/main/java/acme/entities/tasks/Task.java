@@ -31,7 +31,6 @@ public class Task extends DomainEntity{
 	@NotNull
 	protected Date				startDate;
 
-	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				endDate;
