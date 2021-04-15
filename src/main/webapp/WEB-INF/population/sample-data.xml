@@ -46,7 +46,7 @@
 		<property name="finished" value="true"/>			
 	</bean>
 	
-		<bean id="task03" class="acme.entities.tasks.Task">
+	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 3"/>
 		<property name="startDate" value="2021/08/09 00:00"/>
 		<property name="endDate" value="2021/08/11 00:00"/>
@@ -55,6 +55,46 @@
 		<property name="optionalLink" value="http://www.sample-app.com"/>
 		<property name="visibility" value="PUBLIC"/>
 		<property name="finished" value="true"/>
+	</bean>
+	
+	<bean id="task04" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 4"/>
+		<property name="startDate" value="2021/04/01 00:00"/>
+		<property name="endDate" value="2021/04/10 00:00"/>
+		<property name="workload" value="7.0"/>
+		<property name="description" value="This is the oldest announcement in the system."/>	
+		<property name="optionalLink" value="http://www.sample-app.com"/>
+		<property name="visibility" value="Public"/>
+	</bean>
+	
+	<bean id="task05" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 5"/>
+		<property name="startDate" value="2021/03/05 00:00"/>
+		<property name="endDate" value="2021/04/09 00:00"/>
+		<property name="workload" value="10.0"/>
+		<property name="description" value="This is the oldest announcement in the system."/>	
+		<property name="optionalLink" value="http://www.sample-app.com"/>
+		<property name="visibility" value="Public"/>
+	</bean>
+	
+	<bean id="task06" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 6"/>
+		<property name="startDate" value="2021/04/05 00:00"/>
+		<property name="endDate" value="2021/04/12 00:00"/>
+		<property name="workload" value="3.0"/>
+		<property name="description" value="This is the oldest announcement in the system."/>	
+		<property name="optionalLink" value="http://www.sample-app.com"/>
+		<property name="visibility" value="Public"/>
+	</bean>
+	
+	<bean id="task07" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 3"/>
+		<property name="startDate" value="2021/03/09 00:00"/>
+		<property name="endDate" value="2021/03/19 00:00"/>
+		<property name="workload" value="5.0"/>
+		<property name="description" value="This is the oldest announcement in the system."/>	
+		<property name="optionalLink" value="http://www.sample-app.com"/>
+		<property name="visibility" value="Private"/>
 	</bean>
 		
 
