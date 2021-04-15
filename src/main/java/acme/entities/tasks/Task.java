@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -33,13 +32,10 @@ public class Task extends DomainEntity{
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@Future
 	protected Date				startDate;
 
-	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@Future
 	protected Date				endDate;
 	
 	@Digits(integer = 2, fraction = 2)
@@ -52,7 +48,11 @@ public class Task extends DomainEntity{
 	@URL
 	protected String optionalLink;
 	
-
+	@NotNull
+	protected Visibility visibility;
+	
+	@NotNull
+	protected Boolean finished;
 	
 	
 	
