@@ -32,7 +32,7 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.create-shout = ¡Dar un grito!
 master.menu.anonymous.list-task-not-ended = Lista de tareas no terminadas
-
+master.menu.anonymous.list-shouts = Lista de shouts
 # master.menu.autheticated #######################################################
 
 master.menu.authenticated = Autenticado
