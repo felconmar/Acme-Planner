@@ -1,8 +1,10 @@
 package acme.entities.tasks;
 
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Digits;
@@ -12,6 +14,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.workplans.Workplan;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +30,7 @@ public class Task extends DomainEntity{
 	@Length(min = 2, max = 80)
 	protected String title;
 	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				startDate;
@@ -51,7 +55,9 @@ public class Task extends DomainEntity{
 	@NotNull
 	protected Boolean finished;
 	
+	 @ManyToMany(mappedBy = "tasks")
+		protected Set<Workplan> workplans;
 	
-	
+	 
 
 }
