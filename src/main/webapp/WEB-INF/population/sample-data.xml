@@ -59,44 +59,58 @@
 	
 	<bean id="task04" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 4"/>
-		<property name="startDate" value="2021/04/01 00:00"/>
-		<property name="endDate" value="2021/04/10 00:00"/>
-		<property name="workload" value="7.0"/>
+		<property name="startDate" value="2021/01/02 00:00"/>
+		<property name="endDate" value="2021/01/09 00:00"/>
+		<property name="workload" value="3.0"/>
 		<property name="description" value="This is the oldest announcement in the system."/>	
 		<property name="optionalLink" value="http://www.sample-app.com"/>
-		<property name="visibility" value="Public"/>
+		<property name="visibility" value="PUBLIC"/>
+		<property name="finished" value="true"/>
 	</bean>
 	
 	<bean id="task05" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 5"/>
-		<property name="startDate" value="2021/03/05 00:00"/>
-		<property name="endDate" value="2021/04/09 00:00"/>
-		<property name="workload" value="10.0"/>
+		<property name="startDate" value="2021/01/08 00:00"/>
+		<property name="endDate" value="2021/01/22 00:00"/>
+		<property name="workload" value="5.0"/>
 		<property name="description" value="This is the oldest announcement in the system."/>	
 		<property name="optionalLink" value="http://www.sample-app.com"/>
-		<property name="visibility" value="Public"/>
+		<property name="visibility" value="PUBLIC"/>
+		<property name="finished" value="true"/>
 	</bean>
 	
 	<bean id="task06" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 6"/>
-		<property name="startDate" value="2021/04/05 00:00"/>
-		<property name="endDate" value="2021/04/12 00:00"/>
-		<property name="workload" value="3.0"/>
+		<property name="startDate" value="2021/01/04 00:00"/>
+		<property name="endDate" value="2021/02/22 00:00"/>
+		<property name="workload" value="10.0"/>
 		<property name="description" value="This is the oldest announcement in the system."/>	
 		<property name="optionalLink" value="http://www.sample-app.com"/>
-		<property name="visibility" value="Public"/>
+		<property name="visibility" value="PUBLIC"/>
+		<property name="finished" value="true"/>
 	</bean>
 	
 	<bean id="task07" class="acme.entities.tasks.Task">
-		<property name="title" value="Example task 3"/>
-		<property name="startDate" value="2021/03/09 00:00"/>
-		<property name="endDate" value="2021/03/19 00:00"/>
-		<property name="workload" value="5.0"/>
+		<property name="title" value="Example task 7"/>
+		<property name="startDate" value="2021/02/04 00:00"/>
+		<property name="endDate" value="2021/02/23 00:00"/>
+		<property name="workload" value="6.0"/>
 		<property name="description" value="This is the oldest announcement in the system."/>	
 		<property name="optionalLink" value="http://www.sample-app.com"/>
-		<property name="visibility" value="Private"/>
+		<property name="visibility" value="PRIVATE"/>
+		<property name="finished" value="true"/>
 	</bean>
-		
-
+	
+	<bean id="task08" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 8"/>
+		<property name="startDate" value="2021/03/04 00:00"/>
+		<property name="endDate" value="2021/05/23 00:00"/>
+		<property name="workload" value="15.0"/>
+		<property name="description" value="This is the oldest announcement in the system."/>	
+		<property name="optionalLink" value="http://www.sample-app.com"/>
+		<property name="visibility" value="PRIVATE"/>
+		<property name="finished" value="true"/>
+	</bean>
+	
 
 </beans>
