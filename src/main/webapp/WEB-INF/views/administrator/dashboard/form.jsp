@@ -56,7 +56,82 @@
 		</td>
 	</tr>
 </table>
+<h2>
+	<acme:message code="administrator.dashboard.form.title.execution-period"/>
+</h2>
 
+<table class="table table-sm">	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.average-task-execution-period"/>
+		</th>
+		<td>
+			<acme:print value="${averageTaskExecutionPeriod}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviation-task-execution-period"/>
+		</th>
+		<td>
+			<acme:print value="${deviationTaskExecutionPeriod}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.maximum-task-execution-period"/>
+		</th>
+		<td>
+			<acme:print value="${maxTaskExecutionPeriod}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.minimum-task-execution-period"/>
+		</th>
+		<td>
+			<acme:print value="${minTaskExecutionPeriod}"/>
+		</td>
+	</tr>
+</table>
+<h2>
+	<acme:message code="administrator.dashboard.form.title.task-workload"/>
+</h2>
+
+<table class="table table-sm">	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.average-task-workload"/>
+		</th>
+		<td>
+			<acme:print value="${averageTaskWorkload}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviation-task-workload"/>
+		</th>
+		<td>
+			<acme:print value="${deviationTaskWorkload}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.maximum-task-workload"/>
+		</th>
+		<td>
+			<acme:print value="${maxTaskWorkload}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.minimum-task-workload"/>
+		</th>
+		<td>
+			<acme:print value="${minTaskWorkload}"/>
+		</td>
+	</tr>
+</table>
 <!-- 
 
 <h2>

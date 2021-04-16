@@ -31,6 +31,16 @@ public class Dashboard implements Serializable {
 	Integer						totalNumberOfPrivateTasks;
 	Integer						totalNumberOfFinishedTasks;
 	Integer						totalNumberOfNonFinishedTasks;
+	
+	Long 						averageTaskExecutionPeriod;
+	Long 						deviationTaskExecutionPeriod;
+	Long 						minTaskExecutionPeriod;
+	Long 						maxTaskExecutionPeriod;
+	
+	Double 						averageTaskWorkload;
+	Double 						deviationTaskWorkload;
+	Double 						minTaskWorkload;
+	Double 						maxTaskWorkload;
 
 	// Derived attributes -----------------------------------------------------
 

@@ -46,7 +46,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, //
-			"totalNumberOfPublicTasks", "totalNumberOfPrivateTasks", "totalNumberOfFinishedTasks", "totalNumberOfNonFinishedTasks");
+			"totalNumberOfPublicTasks", "totalNumberOfPrivateTasks", "totalNumberOfFinishedTasks", "totalNumberOfNonFinishedTasks",
+			"averageTaskExecutionPeriod", "deviationTaskExecutionPeriod", "minTaskExecutionPeriod", "maxTaskExecutionPeriod",
+			"averageTaskWorkload", "deviationTaskWorkload", "maxTaskWorkload", "minTaskWorkload");
 	}
 
 	@Override
@@ -60,18 +62,51 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final Integer totalNumberOfFinishedTasks;
 		final Integer totalNumberOfNonFinishedTasks;
 		
+		final Long averageTaskExecutionPeriod;
+		final Long deviationTaskExecutionPeriod;
+		final Long minTaskExecutionPeriod;
+		final Long maxTaskExecutionPeriod;
+		
+		final Double averageTaskWorkload;
+		final Double deviationTaskWorkload;
+		final Double minTaskWorkload;
+		final Double maxTaskWorkload;
+		
+		
 		totalNumberOfTasks =  this.repository.totalNumberOfTasks();
 		totalNumberOfPublicTasks = this.repository.totalNumberOfPublicTasks();
 		totalNumberOfPrivateTasks = totalNumberOfTasks - totalNumberOfPublicTasks;
 		totalNumberOfFinishedTasks = this.repository.totalNumberOfFinishedTasks();
 		totalNumberOfNonFinishedTasks = totalNumberOfTasks - totalNumberOfFinishedTasks;
 		
+		averageTaskExecutionPeriod = this.repository.averageTaskExecutionPeriod();
+		deviationTaskExecutionPeriod = this.repository.deviationTaskExecutionPeriod();
+		minTaskExecutionPeriod = this.repository.minTaskExecutionPeriod();
+		maxTaskExecutionPeriod = this.repository.maxTaskExecutionPeriod();
+		
+		averageTaskWorkload = this.repository.averageTaskWorkload();
+		deviationTaskWorkload = this.repository.deviationTaskWorkload();
+		minTaskWorkload = this.repository.minTaskWorkload();
+		maxTaskWorkload = this.repository.maxTaskWorkload();
+		
+		
+		
 		result = new Dashboard();
 		result.setTotalNumberOfPublicTasks(totalNumberOfPublicTasks);
 		result.setTotalNumberOfPrivateTasks(totalNumberOfPrivateTasks);
 		result.setTotalNumberOfFinishedTasks(totalNumberOfFinishedTasks);
 		result.setTotalNumberOfNonFinishedTasks(totalNumberOfNonFinishedTasks);
-
+		
+		result.setAverageTaskExecutionPeriod(averageTaskExecutionPeriod);
+		result.setDeviationTaskExecutionPeriod(deviationTaskExecutionPeriod);
+		result.setMinTaskExecutionPeriod(minTaskExecutionPeriod);
+		result.setMaxTaskExecutionPeriod(maxTaskExecutionPeriod);
+		
+		result.setAverageTaskWorkload(averageTaskWorkload);
+		result.setDeviationTaskWorkload(deviationTaskWorkload);
+		result.setMinTaskWorkload(minTaskWorkload);
+		result.setMaxTaskWorkload(maxTaskWorkload);
+		
 		return result;
 	}
 
