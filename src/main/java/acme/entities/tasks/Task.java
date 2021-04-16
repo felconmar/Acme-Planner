@@ -30,7 +30,7 @@ public class Task extends DomainEntity{
 	@Length(min = 2, max = 80)
 	protected String title;
 	
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				startDate;
