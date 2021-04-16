@@ -1,5 +1,5 @@
 /*
- * AdministratorUserAccountController.java
+ * AnonymousShoutController.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.administrator.userAccount;
+package acme.features.anonymous.shout;
 
 import javax.annotation.PostConstruct;
 
@@ -18,39 +18,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.entities.shouts.Shout;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Administrator;
-import acme.framework.entities.UserAccount;
+import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/administrator/user-account/")
-public class AdministratorUserAccountController extends AbstractController<Administrator, UserAccount> {
+@RequestMapping("/anonymous/shout/")
+public class AnonymousShoutController extends AbstractController<Anonymous, Shout> {
 
 	// Internal state ---------------------------------------------------------
 
-	@Autowired
-	protected AdministratorUserAccountListService	listService;
 
 	@Autowired
-	protected AdministratorUserAccountShowService	showService;
-
-	@Autowired
-	protected AdministratorUserAccountUpdateService	updateService;
+	protected AnonymousShoutCreateService	createService;
 	
 	@Autowired
-	protected AdministratorUserAccountCreateService	createService;
-
+	protected AnonymousShoutListService	listService;
 
 	// Constructors -----------------------------------------------------------
 
-
 	@PostConstruct
 	protected void initialise() {
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
-		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 
 }
