@@ -15,6 +15,14 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+
+<acme:form>
+	
+	
+	<acme:form-submit  code="administrator.word.list.create" action="/administrator/word/create" method="get"/>
+	
+</acme:form>
+<br>
 <acme:list readonly="false">
 	<acme:list-column code="administrator.word.list.label.words" path="word" width="100%"/>
 	

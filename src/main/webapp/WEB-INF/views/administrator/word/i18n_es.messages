@@ -17,3 +17,4 @@ administrator.word.list.create = Añadir palabra
 administrator.word.form.word = Palabra
 administrator.job.form.button.update= Actualizar
 administrator.job.form.button.create= Crear
+administrator.job.form.button.delete = Eliminar

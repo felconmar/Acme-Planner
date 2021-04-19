@@ -27,7 +27,7 @@
 		
   	<acme:form-return code="administrator.spam.form.button.return"/>
   	
-  	<acme:form-return code="administrator.spam.form.button.edit-words" action="/administrator/word/list"/>
+  	<acme:form-submit code="administrator.spam.form.button.edit-words" action="/administrator/word/list" method="get"/>
   	
   	
 </acme:form>
