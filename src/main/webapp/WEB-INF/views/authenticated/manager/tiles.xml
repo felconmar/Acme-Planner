@@ -8,8 +8,10 @@
 
 <tiles-definitions>
 
-	<definition name="authenticated/consumer/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/consumer/form.jsp" />
-	</definition>
 	
+	
+	<definition name="authenticated/manager/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/manager/form.jsp" />
+	</definition>
+
 </tiles-definitions>
