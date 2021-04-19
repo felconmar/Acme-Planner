@@ -18,7 +18,7 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/spam/update" extends="master">		
+	<definition name="administrator/spam/form" extends="master">		
 		<put-attribute name="body" type="template" value="../administrator/spam/form.jsp" />
 	</definition>
 	

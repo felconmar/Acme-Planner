@@ -65,7 +65,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 	public Spam findOne(final Request<Spam> request) {
 		assert request != null;
 
-		 Spam result;
+		Spam result;
 		
 		result = this.repository.findUniqueSpamModule();
 		
@@ -86,5 +86,8 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		
 		this.repository.save(entity);
 	}
+	
+	
+	
 
 }
