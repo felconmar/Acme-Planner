@@ -66,9 +66,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		assert request != null;
 
 		Spam result;
-		
 		result = this.repository.findUniqueSpamModule();
-		
 		return result;
 	}
 

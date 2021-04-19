@@ -73,4 +73,25 @@
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
 	
+		<!-- Spam module -->
+	<bean name="spam1" class="acme.entities.spam.Spam">
+		<property name="threshold" value="10.00"/>
+		<property name="spamWords">
+			<list>
+				<ref bean="word1"/>
+				<ref bean="word2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="word1" class="acme.entities.words.Word">
+		<property name="word" value="hola2"/>
+	</bean>
+	
+		
+	<bean name="word2" class="acme.entities.words.Word">
+		<property name="word" value="hola"/>
+	</bean>
+	
+	
 </beans>

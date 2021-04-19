@@ -52,6 +52,5 @@
 		<property name="optionalLink" value="http://www.sample-app.com"/>
 		<property name="visibility" value="Public"/>
 	</bean>
-		
-
+	
 </beans>
