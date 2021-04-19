@@ -31,6 +31,9 @@ public class AdministratorWordController extends AbstractController<Administrato
 
 	@Autowired
 	protected AdministratorWordListService		listService;
+	
+	@Autowired
+	protected AdministratorWordShowService		showService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -39,6 +42,7 @@ public class AdministratorWordController extends AbstractController<Administrato
 	protected void initialise() {
 		
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		
 	}
 

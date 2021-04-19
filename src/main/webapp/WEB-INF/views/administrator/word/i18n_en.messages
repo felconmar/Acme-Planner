@@ -12,7 +12,10 @@
  
 administrator.word.list.title = List of words considered spam
 administrator.word.list.label.words = Words
-administrator.word.list.label.edit = Edit
-administrator.word.list.label.delete = Delete
+
 
 administrator.word.list.create = Add word
+
+administrator.word.form.word = Word
+administrator.job.form.button.update= Update
+administrator.job.form.button.create= Create
