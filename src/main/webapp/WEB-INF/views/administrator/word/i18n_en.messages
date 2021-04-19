@@ -9,13 +9,10 @@
 # they accept any liabilities with respect to them.
 
 
-administrator.spam.form.title.update = Spam Module
+ 
+administrator.word.list.title = List of words considered spam
+administrator.word.list.label.words = Words
+administrator.word.list.label.edit = Edit
+administrator.word.list.label.delete = Delete
 
-administrator.spam.form.label.threshold = Threshold (%):
-administrator.spam.form.words= Edit Spam Words
-
-
-administrator.spam.form.button.update = Update
-administrator.spam.form.button.return = Return
-administrator.spam.form.button.edit-words = Edit spam words ->
-
+administrator.word.list.create = Add word
