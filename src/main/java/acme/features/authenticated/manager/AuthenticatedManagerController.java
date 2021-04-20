@@ -1,5 +1,5 @@
 /*
- 
+ * AuthenticatedManagerController.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.manager.userAccount;
+package acme.features.authenticated.manager;
 
 import javax.annotation.PostConstruct;
 
@@ -21,27 +21,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import acme.entities.roles.Manager;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.UserAccount;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/manager/user-account/")
-public class ManagerUserAccountController extends AbstractController<Manager, UserAccount> {
+@RequestMapping("/authenticated/manager/")
+public class AuthenticatedManagerController extends AbstractController<Authenticated, Manager> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected ManagerUserAccountCreateService createService;
-	
-	@Autowired
-	protected ManagerUserAccountListService	listService;
+	protected AuthenticatedManagerCreateService	createService;
+
+//	@Autowired
+//	protected AuthenticatedManagerUpdateService	updateService;
 
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+//		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 
 }
