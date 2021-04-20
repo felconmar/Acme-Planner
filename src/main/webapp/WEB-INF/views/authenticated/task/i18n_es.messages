@@ -5,6 +5,7 @@ authenticated.task.list.label.workload = Carga de trabajo
 authenticated.task.list.label.description = Descripcion
 authenticated.task.list.label.optionalLink = Enlace opcional
 authenticated.task.list.label.visibility = Visibilidad
+authenticated.task.list.label.executionPeriod = Periodo de ejecucion
 
 authenticated.task.form.label.title = Titulo
 authenticated.task.form.label.startDate = Fecha de comienzo
