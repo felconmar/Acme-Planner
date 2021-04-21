@@ -168,7 +168,5 @@
 		<property name="finished" value="true"/>
 		<property name="executionPeriod" value="456"/>
 	</bean>
-	
-
 
 </beans>
