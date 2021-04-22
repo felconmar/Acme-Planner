@@ -1,0 +1,19 @@
+manager.task.list.label.title = Title
+manager.task.list.label.startDate = Start date time
+manager.task.list.label.endDate = End Date time
+manager.task.list.label.workload = Workload
+manager.task.list.label.description = Description
+manager.task.list.label.optionalLink = Optional link
+manager.task.list.label.executionPeriod = Execution Period
+manager.task.list.label.visibility = Visibility
+
+manager.task.form.label.title = Title
+manager.task.form.label.startDate = Start date time
+manager.task.form.label.endDate = End Date time
+manager.task.form.label.workload = Workload
+manager.task.form.label.description = Description
+manager.task.form.label.optionalLink = Optional link
+manager.task.form.label.visibility = Visibility
+manager.task.form.label.executionPeriod = Execution Period
+manager.task.form.button.create = Create
+manager.task.form.button.return = Return

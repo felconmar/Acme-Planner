@@ -62,6 +62,10 @@
 			access="hasRole('Manager')">
 			<acme:menu-suboption code="master.menu.manager.favourite-link"
 				action="http://www.manager.com/" />
+			<acme:menu-suboption code="master.menu.manager.created-task"
+				action="/manager/task/create" />
+			<acme:menu-suboption code="master.menu.manager.listed-task"
+				action="/manager/task/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer"
