@@ -11,7 +11,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedTaskRepository extends AbstractRepository {
 
-	@Query("select t from Task t where t.finished = true and t.visibility = 1")
+	@Query("select t from Task t where t.finished = true and t.visibility = 1 order By t.workload")
 	Collection<Task> findEndedPublicTasks();
 
 	@Query("select t from Task t")
