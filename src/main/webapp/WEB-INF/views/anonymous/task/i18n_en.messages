@@ -8,7 +8,8 @@ anonymous.task.list.label.visibility = Visibility
 
 anonymous.task.form.label.title = Title
 anonymous.task.form.label.startDate = Start date time
-anonymous.task.form.label.endDate = End Date time
+
+anonymous.task.form.label.endDate = End date time
 anonymous.task.form.label.workload = Workload
 anonymous.task.form.label.description = Description
 anonymous.task.form.label.optionalLink = Optional link
