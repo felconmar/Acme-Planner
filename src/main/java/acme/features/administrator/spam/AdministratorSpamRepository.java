@@ -23,6 +23,8 @@ public interface AdministratorSpamRepository extends AbstractRepository {
 
 	@Query("select a from Spam a where a.id <= all (select k.id from Spam k)")
 	Spam findUniqueSpamModule();
+	
+	
 
 
 }
