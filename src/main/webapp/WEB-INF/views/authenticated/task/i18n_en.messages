@@ -13,4 +13,5 @@ authenticated.task.form.label.workload = Workload
 authenticated.task.form.label.description = Description
 authenticated.task.form.label.optionalLink = Optional link
 authenticated.task.form.label.visibility = Visibility
+authenticated.task.form.label.executionPeriod = Execution Period
 authenticated.task.form.button.return = Return
