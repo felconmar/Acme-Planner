@@ -11,6 +11,7 @@ import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.entities.tasks.Visibility;
 import acme.entities.words.Word;
+import acme.features.administrator.spam.AdministratorSpamRepository;
 import acme.features.administrator.word.AdministratorWordRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -27,6 +28,9 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		
 		@Autowired
 		protected AdministratorWordRepository wordSpamRepository;
+		
+		@Autowired
+		protected AdministratorSpamRepository spamRepository;
 
 		// AbstractCreateService<Manager, Task> interface --------------
 
@@ -84,11 +88,11 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			assert entity != null;
 			assert errors != null;
 			
-			final List<Word> spamWords= this.wordSpamRepository.findMany();
-			assert !SpamComponent.containSpam(entity.getTitle(),spamWords);
-			assert !SpamComponent.containSpam(entity.getDescription(),spamWords);
-			assert !SpamComponent.containSpam(entity.getOptionalLink(),spamWords);
-
+		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
+		final List<Word> spamWords= this.wordSpamRepository.findMany();
+		assert !SpamComponent.containSpam(entity.getTitle(),spamWords, threshold);
+		assert !SpamComponent.containSpam(entity.getDescription(),spamWords, threshold);
+		assert !SpamComponent.containSpam(entity.getOptionalLink(),spamWords, threshold);
 		}
 
 		@Override
