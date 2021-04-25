@@ -1,13 +1,17 @@
 package acme.features.manager.task;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamComponent;
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.entities.tasks.Visibility;
+import acme.entities.words.Word;
+import acme.features.administrator.word.AdministratorWordRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -20,6 +24,9 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 
 		@Autowired
 		protected ManagerTaskRepository repository;
+		
+		@Autowired
+		protected AdministratorWordRepository wordSpamRepository;
 
 		// AbstractCreateService<Manager, Task> interface --------------
 
@@ -76,6 +83,11 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			assert request != null;
 			assert entity != null;
 			assert errors != null;
+			
+			final List<Word> spamWords= this.wordSpamRepository.findMany();
+			assert !SpamComponent.containSpam(entity.getTitle(),spamWords);
+			assert !SpamComponent.containSpam(entity.getDescription(),spamWords);
+			assert !SpamComponent.containSpam(entity.getOptionalLink(),spamWords);
 
 		}
 
