@@ -6,6 +6,8 @@ manager.task.list.label.description = Descripcion
 manager.task.list.label.optionalLink = Enlace opcional
 manager.task.list.label.executionPeriod = Periodo de ejecucion
 manager.task.list.label.visibility = Visibilidad
+manager.task.form.label.visibility.PRIVATE = Privado
+manager.task.form.label.visibility.PUBLIC = Publico
 
 manager.task.form.label.title = Titulo
 manager.task.form.label.startDate = Fecha de comienzo

@@ -10,7 +10,10 @@
 	<acme:form-integer 	code="manager.task.form.label.workload" path="workload"/>
 	<acme:form-textarea code="manager.task.form.label.description" path="description"/>
 	<acme:form-url 		code="manager.task.form.label.optionalLink" path="optionalLink"/>
-	<acme:form-textbox 	code="manager.task.form.label.visibility" path="visibility"/>
+	<acme:form-select	code="manager.task.form.label.visibility" path="visibility">
+		<acme:form-option code="manager.task.form.label.visibility.PRIVATE" value="PRIVATE"/>
+		<acme:form-option code="manager.task.form.label.visibility.PUBLIC" value="PUBLIC"/>
+	</acme:form-select>	
 	<acme:form-textbox 	code="manager.task.form.label.executionPeriod" path="executionPeriod"/>
 	<acme:form-submit   test="${command == 'create'}"	code="manager.task.form.button.create" action="/manager/task/create"/>
 	<acme:form-return 	code="manager.task.form.button.return"/>	
