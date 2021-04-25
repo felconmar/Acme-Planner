@@ -12,7 +12,7 @@
 
 package acme.entities.spam;
 
-import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -45,5 +45,5 @@ public class Spam extends DomainEntity {
 	// Relationships ----------------------------------------------------------
 	
 	@OneToMany
-	protected Collection<Word> spamWords;
+	protected List<Word> spamWords;
 }
