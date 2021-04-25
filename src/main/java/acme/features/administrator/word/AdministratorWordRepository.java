@@ -12,7 +12,7 @@
 
 package acme.features.administrator.word;
 
-import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -25,7 +25,7 @@ public interface AdministratorWordRepository extends AbstractRepository {
 
 
 	@Query("select w from Word w")
-	Collection<Word> findMany();
+	List<Word> findMany();
 	
 	@Query("select w from Word w where w.id = ?1")
 	Word findOneWordById(int id);

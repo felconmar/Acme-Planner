@@ -56,6 +56,13 @@
 			access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link"
 				action="http://www.example.com/" />
+
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.manager"
+			access="hasRole('Manager')">
+			<acme:menu-suboption code="master.menu.manager.favourite-link"
+				action="http://www.manager.com/" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.manager"
