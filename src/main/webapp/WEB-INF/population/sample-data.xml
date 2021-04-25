@@ -137,6 +137,7 @@
 				<ref bean="task01" />
 			</list>
 		</property>
+
 		<property name="workload" value="0.0" />
 		<property name="visibility" value="PUBLIC" />
 	</bean>
