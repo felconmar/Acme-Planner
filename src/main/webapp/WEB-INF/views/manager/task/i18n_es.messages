@@ -16,6 +16,6 @@ manager.task.form.label.optionalLink = Enlace opcional
 manager.task.form.label.visibility = Visibilidad
 manager.task.form.label.executionPeriod = Periodo de ejecucion
 manager.task.form.button.create = Crear
-manager.task.form.button.return = Volver 
+manager.task.form.button.return = Volver
 manager.task.form.button.update = Actualizar
 manager.task.form.button.delete = Borrar
