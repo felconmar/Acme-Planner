@@ -15,6 +15,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+
 <h2>
 	<acme:message code="administrator.dashboard.form.title.general-indicators"/>
 </h2>
@@ -132,47 +133,42 @@
 		</td>
 	</tr>
 </table>
-<!-- 
+
+
 
 <h2>
-	<acme:message code="administrator.dashboard.form.title.application-statuses"/>
+	<acme:message code="administrator.dashboard.form.label.workplan-chart"/>
 </h2>
 
 <div>
 	<canvas id="canvas"></canvas>
 </div>
 
--->
 
 <script type="text/javascript">
 	$(document).ready(function() {
 		var data = {
 			labels : [
-					"PENDING", "ACCEPTED", "REJECTED"
+					"PUBLISHED", "TOTAL"
 			],
 			datasets : [
 				{
-					data : [
-						<jstl:out value="${ratioOfPendingApplications}"/>, 
-						<jstl:out value="${ratioOfAcceptedApplications}"/>, 
-						<jstl:out value="${ratioOfRejectedApplications}"/>
-					]
+					data : [	
+						3,
+						8
+					],
+					backgroundColor: [
+					      'rgb(255, 99, 132)',
+					      'rgb(54, 162, 235)'
+					],
+					 hoverOffset: 4
 				}
 			]
 		};
 		var options = {
-			scales : {
-				yAxes : [
-					{
-						ticks : {
-							suggestedMin : 0.0,
-							suggestedMax : 1.0
-						}
-					}
-				]
-			},
+		
 			legend : {
-				display : false
+				display : true
 			}
 		};
 	
@@ -181,9 +177,10 @@
 		canvas = document.getElementById("canvas");
 		context = canvas.getContext("2d");
 		new Chart(context, {
-			type : "bar",
+			type : "pie",
 			data : data,
 			options : options
 		});
 	});
 </script>
+

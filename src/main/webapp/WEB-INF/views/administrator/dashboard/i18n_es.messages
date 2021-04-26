@@ -15,6 +15,7 @@ administrator.dashboard.form.label.total-number-of-public-tasks = Número total 
 administrator.dashboard.form.label.total-number-of-private-tasks = Número total de tasks privadas
 administrator.dashboard.form.label.total-number-of-finished-tasks = Número total de tasks terminadas
 administrator.dashboard.form.label.total-number-of-non-finished-tasks = Número total de tasks no terminadas
+administrator.dashboard.form.label.workplan-chart = Workplan indicators
 
 administrator.dashboard.form.title.execution-period = Periodo de ejecución
 administrator.dashboard.form.label.average-task-execution-period = Media de los periodos de ejecución
