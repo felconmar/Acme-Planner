@@ -70,5 +70,41 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 //
 //	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = acme.entities.jobs.ApplicationStatus.REJECTED")
 //	Double ratioOfRejectedApplications();
+	
+	@Query("select count(w) from Workplan w")
+	Integer totalNumberOfWorkplans();
+	
+	@Query("select count(w) from Workplan w where w.visibility = 1")
+	Integer totalNumberOfPublicWorkplans();
+	
+//	@Query("select count(t) from Task t where t.visibility = 'Private'")
+//	Integer totalNumberOfPrivateTasks();
+	
+	@Query("select count(w) from Workplan w where w.endDate < CURRENT_TIMESTAMP")
+	Integer totalNumberOfFinishedWorkplans();
+	
+	@Query("select avg(w.workload) from Workplan w")
+	Double averageWorkplanWorkload();
+	
+	@Query("select stddev(w.workload) from Workplan w")
+	Double deviationWorkplanWorkload();
+	
+	@Query("select min(w.workload) from Workplan w")
+	Double minWorkplanWorkload();
+	
+	@Query("select max(w.workload) from Workplan w")
+	Double maxWorkplanWorkload();
+	
+	@Query("select avg(w.executionPeriod) from Workplan w")
+	Long averageWorkplanExecutionPeriod();
+	
+	@Query("select stddev(w.executionPeriod) from Workplan w")
+	Long deviationWorkplanExecutionPeriod();
+	
+	@Query("select min(w.executionPeriod) from Workplan w")
+	Long minWorkplanExecutionPeriod();
+	
+	@Query("select max(w.executionPeriod) from Workplan w")
+	Long maxWorkplanExecutionPeriod();
 
 }

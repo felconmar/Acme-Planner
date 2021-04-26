@@ -28,4 +28,19 @@ administrator.dashboard.form.label.deviation-task-workload = Desviación de las 
 administrator.dashboard.form.label.maximum-task-workload = Máximo carga de trabajo
 administrator.dashboard.form.label.minimum-task-workload = Mínima carga de trabajo
 
+administrator.dashboard.form.label.total-number-of-public-workplans = Número total de workplans públicas
+administrator.dashboard.form.label.total-number-of-private-workplans = Número total de workplans privadas
+administrator.dashboard.form.label.total-number-of-finished-workplans = Número total de workplans terminadas
+administrator.dashboard.form.label.total-number-of-non-finished-workplans = Número total de workplans no terminadas
+
+administrator.dashboard.form.label.average-workplan-execution-period = Media de los periodos de ejecución
+administrator.dashboard.form.label.deviation-workplan-execution-period = Desviación de los periodos de ejecución
+administrator.dashboard.form.label.maximum-workplan-execution-period = Máximo periodo de ejecución
+administrator.dashboard.form.label.minimum-workplan-execution-period = Mínimo periodo de ejecución
+
+administrator.dashboard.form.label.average-workplan-workload = Media de las cargas de trabajo
+administrator.dashboard.form.label.deviation-workplan-workload = Desviación de las cargas de trabajo
+administrator.dashboard.form.label.maximum-workplan-workload = Máximo carga de trabajo
+administrator.dashboard.form.label.minimum-workplan-workload = Mínima carga de trabajo
+
 administrator.dashboard.form.title.application-statuses = Estado de las solicitudes

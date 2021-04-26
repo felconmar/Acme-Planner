@@ -48,7 +48,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		request.unbind(entity, model, //
 			"totalNumberOfPublicTasks", "totalNumberOfPrivateTasks", "totalNumberOfFinishedTasks", "totalNumberOfNonFinishedTasks",
 			"averageTaskExecutionPeriod", "deviationTaskExecutionPeriod", "minTaskExecutionPeriod", "maxTaskExecutionPeriod",
-			"averageTaskWorkload", "deviationTaskWorkload", "maxTaskWorkload", "minTaskWorkload");
+			"averageTaskWorkload", "deviationTaskWorkload", "maxTaskWorkload", "minTaskWorkload",
+			"totalNumberOfPublicWorkplans", "totalNumberOfPrivateWorkplans", "totalNumberOfFinishedWorkplans", "totalNumberOfNonFinishedWorkplans",
+			"averageWorkplanExecutionPeriod", "deviationWorkplanExecutionPeriod", "minWorkplanExecutionPeriod", "maxWorkplanExecutionPeriod",
+			"averageWorkplanWorkload", "deviationWorkplanWorkload", "maxWorkplanWorkload", "minWorkplanWorkload");
 	}
 
 	@Override
@@ -72,6 +75,22 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final Double minTaskWorkload;
 		final Double maxTaskWorkload;
 		
+		final Integer totalNumberOfWorkplans;
+		final Integer totalNumberOfPublicWorkplans;
+		final Integer totalNumberOfPrivateWorkplans;
+		final Integer totalNumberOfFinishedWorkplans;
+		final Integer totalNumberOfNonFinishedWorkplans;
+		
+		final Long averageWorkplanExecutionPeriod;
+		final Long deviationWorkplanExecutionPeriod;
+		final Long minWorkplanExecutionPeriod;
+		final Long maxWorkplanExecutionPeriod;
+		
+		final Double averageWorkplanWorkload;
+		final Double deviationWorkplanWorkload;
+		final Double minWorkplanWorkload;
+		final Double maxWorkplanWorkload;
+		
 		
 		totalNumberOfTasks =  this.repository.totalNumberOfTasks();
 		totalNumberOfPublicTasks = this.repository.totalNumberOfPublicTasks();
@@ -89,6 +108,21 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		minTaskWorkload = this.repository.minTaskWorkload();
 		maxTaskWorkload = this.repository.maxTaskWorkload();
 		
+		totalNumberOfWorkplans =  this.repository.totalNumberOfWorkplans();
+		totalNumberOfPublicWorkplans = this.repository.totalNumberOfPublicWorkplans();
+		totalNumberOfPrivateWorkplans = totalNumberOfWorkplans - totalNumberOfPublicWorkplans;
+		totalNumberOfFinishedWorkplans = this.repository.totalNumberOfFinishedWorkplans();
+		totalNumberOfNonFinishedWorkplans = totalNumberOfWorkplans - totalNumberOfFinishedWorkplans;
+		
+		averageWorkplanExecutionPeriod = this.repository.averageWorkplanExecutionPeriod();
+		deviationWorkplanExecutionPeriod = this.repository.deviationWorkplanExecutionPeriod();
+		minWorkplanExecutionPeriod = this.repository.minWorkplanExecutionPeriod();
+		maxWorkplanExecutionPeriod = this.repository.maxWorkplanExecutionPeriod();
+		
+		averageWorkplanWorkload = this.repository.averageWorkplanWorkload();
+		deviationWorkplanWorkload = this.repository.deviationWorkplanWorkload();
+		minWorkplanWorkload = this.repository.minWorkplanWorkload();
+		maxWorkplanWorkload = this.repository.maxWorkplanWorkload();
 		
 		
 		result = new Dashboard();
@@ -106,6 +140,21 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationTaskWorkload(deviationTaskWorkload);
 		result.setMinTaskWorkload(minTaskWorkload);
 		result.setMaxTaskWorkload(maxTaskWorkload);
+		
+		result.setTotalNumberOfPublicWorkplans(totalNumberOfPublicWorkplans);
+		result.setTotalNumberOfPrivateWorkplans(totalNumberOfPrivateWorkplans);
+		result.setTotalNumberOfFinishedWorkplans(totalNumberOfFinishedWorkplans);
+		result.setTotalNumberOfNonFinishedWorkplans(totalNumberOfNonFinishedWorkplans);
+		
+		result.setAverageWorkplanExecutionPeriod(averageWorkplanExecutionPeriod);
+		result.setDeviationWorkplanExecutionPeriod(deviationWorkplanExecutionPeriod);
+		result.setMinWorkplanExecutionPeriod(minWorkplanExecutionPeriod);
+		result.setMaxWorkplanExecutionPeriod(maxWorkplanExecutionPeriod);
+		
+		result.setAverageWorkplanWorkload(averageWorkplanWorkload);
+		result.setDeviationWorkplanWorkload(deviationWorkplanWorkload);
+		result.setMinWorkplanWorkload(minWorkplanWorkload);
+		result.setMaxWorkplanWorkload(maxWorkplanWorkload);
 		
 		return result;
 	}

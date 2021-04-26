@@ -41,6 +41,21 @@ public class Dashboard implements Serializable {
 	Double 						deviationTaskWorkload;
 	Double 						minTaskWorkload;
 	Double 						maxTaskWorkload;
+	
+	Integer						totalNumberOfPublicWorkplans;
+	Integer						totalNumberOfPrivateWorkplans;
+	Integer						totalNumberOfFinishedWorkplans;
+	Integer						totalNumberOfNonFinishedWorkplans;
+	
+	Long 						averageWorkplanExecutionPeriod;
+	Long 						deviationWorkplanExecutionPeriod;
+	Long 						minWorkplanExecutionPeriod;
+	Long 						maxWorkplanExecutionPeriod;
+	
+	Double 						averageWorkplanWorkload;
+	Double 						deviationWorkplanWorkload;
+	Double 						minWorkplanWorkload;
+	Double 						maxWorkplanWorkload;
 
 	// Derived attributes -----------------------------------------------------
 

@@ -131,14 +131,15 @@
 
 		<property name="startDate" value="2021/06/01 00:00" />
 		<property name="endDate" value="2021/06/19 00:00" />
-
+		
 		<property name="tasks">
 			<list>
 				<ref bean="task01" />
 			</list>
 		</property>
-		<property name="workload" value="0.0" />
+		<property name="workload" value="21.0" />
 		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="14" />
 	</bean>
 
 	<bean id="workplan02" class="acme.entities.workplans.Workplan">
@@ -151,8 +152,9 @@
 				<ref bean="task01" />
 			</list>
 		</property>
-		<property name="workload" value="0.0" />
+		<property name="workload" value="34.0" />
 		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="24" />
 	</bean>
 
 	<bean id="workplan03" class="acme.entities.workplans.Workplan">
@@ -165,8 +167,99 @@
 				<ref bean="task01" />
 			</list>
 		</property>
-		<property name="workload" value="0.0" />
+		<property name="workload" value="24.0" />
 		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="34" />
+	</bean>
+	
+	<bean id="workplan04" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/04/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+
+		<property name="tasks">
+			<list>
+				<ref bean="task02" />
+			</list>
+		</property>
+		<property name="workload" value="56.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="90" />
+	</bean>
+	
+	<bean id="workplan05" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/03/19 00:00" />
+
+		<property name="tasks">
+			<list>
+				<ref bean="task02" />
+			</list>
+		</property>
+		<property name="workload" value="23.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="89" />
+	</bean>
+	
+	<bean id="workplan06" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/02/01 00:00" />
+		<property name="endDate" value="2021/02/19 00:00" />
+
+		<property name="tasks">
+			<list>
+				<ref bean="task02" />
+			</list>
+		</property>
+		<property name="workload" value="12.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="56" />
+	</bean>
+	
+	<bean id="workplan07" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/05/01 00:00" />
+		<property name="endDate" value="2021/05/30 00:00" />
+
+		<property name="tasks">
+			<list>
+				<ref bean="task03" />
+			</list>
+		</property>
+		<property name="workload" value="4.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="24" />
+	</bean>
+	
+	<bean id="workplan08" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/04/01 00:00" />
+		<property name="endDate" value="2021/05/19 00:00" />
+
+		<property name="tasks">
+			<list>
+				<ref bean="task03" />
+			</list>
+		</property>
+		<property name="workload" value="5.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="56" />
+	</bean>
+	
+	<bean id="workplan09" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+
+		<property name="tasks">
+			<list>
+				<ref bean="task03" />
+			</list>
+		</property>
+		<property name="workload" value="65.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="45" />
 	</bean>
 	
 	
