@@ -79,10 +79,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		totalNumberOfFinishedTasks = this.repository.totalNumberOfFinishedTasks();
 		totalNumberOfNonFinishedTasks = totalNumberOfTasks - totalNumberOfFinishedTasks;
 		
-		averageTaskExecutionPeriod = this.repository.averageTaskExecutionPeriod();
-		deviationTaskExecutionPeriod = this.repository.deviationTaskExecutionPeriod();
-		minTaskExecutionPeriod = this.repository.minTaskExecutionPeriod();
-		maxTaskExecutionPeriod = this.repository.maxTaskExecutionPeriod();
+//		averageTaskExecutionPeriod = this.repository.averageTaskExecutionPeriod();
+//		deviationTaskExecutionPeriod = this.repository.deviationTaskExecutionPeriod();
+//		minTaskExecutionPeriod = this.repository.minTaskExecutionPeriod();
+//		maxTaskExecutionPeriod = this.repository.maxTaskExecutionPeriod();
 		
 		averageTaskWorkload = this.repository.averageTaskWorkload();
 		deviationTaskWorkload = this.repository.deviationTaskWorkload();
@@ -97,10 +97,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setTotalNumberOfFinishedTasks(totalNumberOfFinishedTasks);
 		result.setTotalNumberOfNonFinishedTasks(totalNumberOfNonFinishedTasks);
 		
-		result.setAverageTaskExecutionPeriod(averageTaskExecutionPeriod);
-		result.setDeviationTaskExecutionPeriod(deviationTaskExecutionPeriod);
-		result.setMinTaskExecutionPeriod(minTaskExecutionPeriod);
-		result.setMaxTaskExecutionPeriod(maxTaskExecutionPeriod);
+//		result.setAverageTaskExecutionPeriod(averageTaskExecutionPeriod);
+//		result.setDeviationTaskExecutionPeriod(deviationTaskExecutionPeriod);
+//		result.setMinTaskExecutionPeriod(minTaskExecutionPeriod);
+//		result.setMaxTaskExecutionPeriod(maxTaskExecutionPeriod);
 		
 		result.setAverageTaskWorkload(averageTaskWorkload);
 		result.setDeviationTaskWorkload(deviationTaskWorkload);

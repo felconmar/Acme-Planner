@@ -56,7 +56,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility", "executionPeriod");
+			request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility");
 		}
 
 		@Override
@@ -76,7 +76,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			result.setDescription("This is the oldest announcement in the system.");
 			result.setOptionalLink("http://www.sample-app.com");
 			result.setVisibility(Visibility.PUBLIC);
-			result.setExecutionPeriod(12l);
 			result.setFinished(true);
 
 			return result;
@@ -99,6 +98,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		public void create(final Request<Task> request, final Task entity) {
 			assert request != null;
 			assert entity != null;
+	
 			
 			final Boolean finished = false;
 			entity.setFinished(finished);

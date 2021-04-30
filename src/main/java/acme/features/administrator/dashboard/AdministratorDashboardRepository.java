@@ -44,17 +44,17 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select max(t.workload) from Task t")
 	Double maxTaskWorkload();
 	
-	@Query("select avg(t.executionPeriod) from Task t")
-	Long averageTaskExecutionPeriod();
-	
-	@Query("select stddev(t.executionPeriod) from Task t")
-	Long deviationTaskExecutionPeriod();
-	
-	@Query("select min(t.executionPeriod) from Task t")
-	Long minTaskExecutionPeriod();
-	
-	@Query("select max(t.executionPeriod) from Task t")
-	Long maxTaskExecutionPeriod();
+//	@Query("select avg(t.executionPeriod) from Task t")
+//	Long averageTaskExecutionPeriod();
+//	
+//	@Query("select stddev(t.executionPeriod) from Task t")
+//	Long deviationTaskExecutionPeriod();
+//	
+//	@Query("select min(t.executionPeriod) from Task t")
+//	Long minTaskExecutionPeriod();
+//	
+//	@Query("select max(t.executionPeriod) from Task t")
+//	Long maxTaskExecutionPeriod();
 //
 //	@Query("select avg(select count(a) from Application a where a.worker.id = w.id) from Worker w")
 //	Double averageNumberOfApplicationsPerWorker();

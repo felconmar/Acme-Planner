@@ -59,11 +59,7 @@
 
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.manager"
-			access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.manager.favourite-link"
-				action="http://www.manager.com/" />
-		</acme:menu-option>
+		
 		
 		<acme:menu-option code="master.menu.manager"
 			access="hasRole('Manager')">
@@ -73,6 +69,10 @@
 				action="/manager/task/create" />
 			<acme:menu-suboption code="master.menu.manager.listed-task"
 				action="/manager/task/list" />
+				<acme:menu-suboption code="master.menu.manager.listed-workplan"
+				action="/manager/workplan/list" />
+				<acme:menu-suboption code="master.menu.manager.created-workplan"
+				action="/manager/workplan/create" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer"

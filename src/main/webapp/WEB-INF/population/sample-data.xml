@@ -26,7 +26,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PRIVATE" />
 		<property name="finished" value="false" />
-		<property name="executionPeriod" value="48" />
 	</bean>
 
 	<bean id="task02" class="acme.entities.tasks.Task">
@@ -40,7 +39,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="true" />
-		<property name="executionPeriod" value="72" />
 	</bean>
 	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 3" />
@@ -53,7 +51,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="true" />
-		<property name="executionPeriod" value="48" />
 	</bean>
 
 	<bean id="task04" class="acme.entities.tasks.Task">
@@ -67,7 +64,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="true" />
-		<property name="executionPeriod" value="168" />
 	</bean>
 
 	<bean id="task05" class="acme.entities.tasks.Task">
@@ -81,7 +77,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="true" />
-		<property name="executionPeriod" value="336" />
 	</bean>
 
 	<bean id="task06" class="acme.entities.tasks.Task">
@@ -95,7 +90,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="true" />
-		<property name="executionPeriod" value="432" />
 	</bean>
 
 	<bean id="task07" class="acme.entities.tasks.Task">
@@ -109,7 +103,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PRIVATE" />
 		<property name="finished" value="true" />
-		<property name="executionPeriod" value="456" />
 	</bean>
 
 	<bean id="task08" class="acme.entities.tasks.Task">
@@ -123,7 +116,6 @@
 			value="http://www.sample-app.com" />
 		<property name="visibility" value="PRIVATE" />
 		<property name="finished" value="true" />
-		<property name="executionPeriod" value="456" />
 	</bean>
 
 	<!-- WORK PLANS -->

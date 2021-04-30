@@ -56,13 +56,15 @@ public class Workplan extends DomainEntity {
 
 	@NotNull
 	protected Visibility		visibility;
+	
+
 
 
 	public Double calculateWorkload() {
 
 		final Set<Task> tasks = this.getTasks();
 
-		if (tasks.isEmpty()) {
+		if (tasks==null || tasks.isEmpty()) {
 			return 0.0;
 		} else {
 			return tasks.stream().mapToDouble(x -> x.getWorkload()).sum();

@@ -58,10 +58,4 @@ public class Task extends DomainEntity{
 	 @ManyToMany(mappedBy = "tasks")
 		protected Set<Workplan> workplans;
 	
-	protected Long executionPeriod;
-	
-	public long calculateExecutionPeriod() {
-		return (this.getEndDate().getTime() / 3600000) - (this.getStartDate().getTime() / 3600000);
-	}
-
 }

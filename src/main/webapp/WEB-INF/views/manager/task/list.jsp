@@ -11,7 +11,6 @@
 	<acme:list-column code="manager.task.list.label.description" path="description" width="10%"/>
 	<acme:list-column code="manager.task.list.label.visibility" path="visibility" width="10%"/>
 	<acme:list-column code="manager.task.list.label.optionalLink" path="optionalLink" width="10%"/>
-	<acme:list-column code="manager.task.list.label.executionPeriod" path="executionPeriod" width="10%"/>
 </acme:list>
 <acme:form>
 	<acme:form-submit code="master.menu.manager.created-task" action="/manager/task/create" />

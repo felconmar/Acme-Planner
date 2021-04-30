@@ -61,6 +61,9 @@ master.menu.manager.favourite-link = Favourite link
 master.menu.manager.listed-task = List tasks
 master.menu.manager.created-task = Create task
 
+master.menu.manager.created-workplan= Create Workplan
+master.menu.manager.listed-workplan= List Workplans
+
 
 # master.menu.consumer ##########################################################
 

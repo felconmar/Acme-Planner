@@ -1,0 +1,19 @@
+manager.workplan.form.label.visibility= Visibilidad
+manager.workplan.form.label.startDate = Fecha de comienzo
+manager.workplan.form.label.endDate = Fecha de fin
+manager.workplan.form.label.visibility.PRIVATE= Privado
+manager.workplan.form.label.visibility.PUBLIC= Publico
+manager.workplan.form.label.workload= Carga de trabajo
+manager.workplan.form.button.create= Crear
+manager.workplan.form.button.update = Actualizar
+manager.workplan.form.button.delete = Eliminar
+manager.workplan.form.button.return = Volver
+
+ manager.workplan.list.label.visibility.PRIVATE= Privado
+manager.workplan.list.label.visibility.PUBLIC= Publico
+manager.workplan.list.label.startDate = Fecha de comienzo
+manager.workplan.list.label.endDate = Fecha de fin
+manager.workplan.list.label.workload = Carga de trabajo 
+manager.workplan.list.label.visibility = Visibilidad
+
+master.menu.manager.created-workplan= Crear
