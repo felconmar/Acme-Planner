@@ -40,18 +40,7 @@ public class AnonymousWorkplanShowService implements AbstractShowService<Anonymo
 		assert model != null;
 		
 		request.unbind(entity, model, "startDate", "endDate", "workload", "visibility","id");
-		/*
-		final Set<Task> notFinishedPublicTasks= new HashSet<Task>();
-		final Set<Task> allTasks= entity.getTasks();
-		
-		for (final Task t:allTasks) {
-			if(!t.getFinished() && t.getVisibility().equals(Visibility.PUBLIC)) {
-				notFinishedPublicTasks.add(t);
-			}
-		}
-		
-		model.setAttribute("notFinishedPublicTasks", notFinishedPublicTasks);
-		*/
+	
 	}
 
 	@Override
