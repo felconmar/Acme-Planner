@@ -20,4 +20,9 @@ public interface AnonymousTaskRepository extends AbstractRepository {
 
 	@Query("select t from Task t where t.id = ?1")
 	Task findOneTaskFromId(int id);
+	
+	@Query("select t from Workplan w left join w.tasks t where w.id= ?1 and t.visibility = 'PUBLIC' and t.finished = false")
+	Collection<Task> findPublicNotFinishedTasksFromWorkplan(int id);
+	
+	
 }

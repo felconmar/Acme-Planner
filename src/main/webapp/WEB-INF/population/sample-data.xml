@@ -135,6 +135,7 @@
 		<property name="tasks">
 			<list>
 				<ref bean="task01" />
+			
 			</list>
 		</property>
 		<property name="workload" value="0.0" />

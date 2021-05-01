@@ -32,6 +32,8 @@
 
 			<acme:menu-suboption code="master.menu.anonymous.list-shouts"
 				action="/anonymous/shout/list" />
+				
+				
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

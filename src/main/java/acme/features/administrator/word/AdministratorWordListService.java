@@ -31,8 +31,7 @@ public class AdministratorWordListService implements AbstractListService<Adminis
 	protected AdministratorWordRepository repository;
 
 
-	// AbstractListService<Administrator, Shout> interface --------------
-
+	
 	@Override
 	public boolean authorise(final Request<Word> request) {
 		assert request != null;

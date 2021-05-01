@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.components.CustomCommand;
 import acme.entities.tasks.Task;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
@@ -16,16 +17,20 @@ import acme.framework.entities.Anonymous;
 public class AnonymousTaskController extends AbstractController<Anonymous, Task> {
 	
 	@Autowired
-	private AnonymousTaskListService listService;
+	protected AnonymousTaskListService listService;
 	
 	@Autowired
-	private AnonymousTaskShowService showService;
+	protected AnonymousTaskShowService showService;
 	
+	@Autowired
+	protected AnonymousTaskListFromWorkplan listFromWorkplanService;
 	
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		
+		super.addCustomCommand(CustomCommand.LIST_FROM_WORKPLAN, BasicCommand.LIST, this.listService);
 	}
 	
 }

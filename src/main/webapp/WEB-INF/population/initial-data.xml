@@ -80,6 +80,16 @@
 			<list>
 				<ref bean="word1"/>
 				<ref bean="word2"/>
+				<ref bean="word3"/>
+				<ref bean="word4"/>
+				<ref bean="word5"/>
+				<ref bean="word6"/>
+				<ref bean="word7"/>
+				<ref bean="word8"/>
+				<ref bean="word9"/>
+				<ref bean="word10"/>
+				<ref bean="word11"/>
+				<ref bean="word12"/>
 			</list>
 		</property>
 	</bean>

@@ -43,7 +43,6 @@ public class Workplan extends DomainEntity {
 	protected Date			startDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
-
 	@NotNull
 	protected Date			endDate;
 

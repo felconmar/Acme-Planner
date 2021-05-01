@@ -9,3 +9,4 @@
 	<acme:list-column code="anonymous.task.list.label.endDate" path="endDate" width="10%"/>
 	<acme:list-column code="anonymous.task.list.label.workload" path="workload" width="10%"/>
 </acme:list>
+
