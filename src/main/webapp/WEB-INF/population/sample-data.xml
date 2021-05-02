@@ -125,54 +125,193 @@
 		<property name="finished" value="true" />
 		<property name="executionPeriod" value="456" />
 	</bean>
+	
+	<bean id="task09" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 9" />
+		<property name="startDate" value="2021/03/14 00:00" />
+		<property name="endDate" value="2021/05/23 00:00" />
+		<property name="workload" value="10.0" />
+		<property name="description"
+			value="This is the oldest announcement in the system." />
+		<property name="optionalLink"
+			value="http://www.sample-app.com" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="finished" value="true" />
+		<property name="executionPeriod" value="259" />
+	</bean>
+	
+	<bean id="task10" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 10" />
+		<property name="startDate" value="2021/04/04 00:00" />
+		<property name="endDate" value="2021/05/12 00:00" />
+		<property name="workload" value="15.0" />
+		<property name="description"
+			value="This is the oldest announcement in the system." />
+		<property name="optionalLink"
+			value="http://www.sample-app.com" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="finished" value="false" />
+		<property name="executionPeriod" value="320" />
+	</bean>
+	
+	<bean id="task11" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 11" />
+		<property name="startDate" value="2021/04/04 00:00" />
+		<property name="endDate" value="2021/05/12 00:00" />
+		<property name="workload" value="15.0" />
+		<property name="description"
+			value="This is the oldest announcement in the system." />
+		<property name="optionalLink"
+			value="http://www.sample-app.com" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="finished" value="false" />
+		<property name="executionPeriod" value="390" />
+	</bean>
+	
+	<bean id="task12" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 11" />
+		<property name="startDate" value="2021/04/01 00:00" />
+		<property name="endDate" value="2021/05/11 00:00" />
+		<property name="workload" value="19.0" />
+		<property name="description"
+			value="This is the oldest announcement in the system." />
+		<property name="optionalLink"
+			value="http://www.sample-app.com" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="finished" value="true" />
+		<property name="executionPeriod" value="465" />
+	</bean>
 
+	
 	<!-- WORK PLANS -->
 	<bean id="workplan01" class="acme.entities.workplans.Workplan">
-
 		<property name="startDate" value="2021/06/01 00:00" />
 		<property name="endDate" value="2021/06/19 00:00" />
-
-		<property name="tasks">
-			<list>
-				<ref bean="task01" />
-			</list>
-		</property>
-
-		<property name="workload" value="0.0" />
+		<property name="workload" value="21.0" />
 		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="296" />
 	</bean>
 
 	<bean id="workplan02" class="acme.entities.workplans.Workplan">
-
 		<property name="startDate" value="2021/07/01 00:00" />
 		<property name="endDate" value="2021/07/19 00:00" />
-
-		<property name="tasks">
-			<list>
-				<ref bean="task01" />
-			</list>
-		</property>
-		<property name="workload" value="0.0" />
+		<property name="workload" value="34.0" />
 		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="189" />
 	</bean>
 
 	<bean id="workplan03" class="acme.entities.workplans.Workplan">
-
 		<property name="startDate" value="2021/05/01 00:00" />
 		<property name="endDate" value="2021/05/19 00:00" />
-
-		<property name="tasks">
-			<list>
-				<ref bean="task01" />
-			</list>
-		</property>
-		<property name="workload" value="0.0" />
+		<property name="workload" value="24.0" />
 		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="361" />
+	</bean>
+	
+	<bean id="workplan04" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/04/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+		<property name="workload" value="56.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="456" />
+	</bean>
+	
+	<bean id="workplan05" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/03/19 00:00" />
+		<property name="workload" value="23.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="291" />
+	</bean>
+	
+	<bean id="workplan06" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/02/01 00:00" />
+		<property name="endDate" value="2021/02/19 00:00" />
+		<property name="workload" value="12.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="319" />
+	</bean>
+	
+	<bean id="workplan07" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/05/01 00:00" />
+		<property name="endDate" value="2021/05/30 00:00" />
+		<property name="workload" value="4.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="156" />
+	</bean>
+	
+	<bean id="workplan08" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/04/01 00:00" />
+		<property name="endDate" value="2021/05/19 00:00" />
+		<property name="workload" value="5.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="352" />
+	</bean>
+	
+	<bean id="workplan09" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+		<property name="workload" value="65.0" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="executionPeriod" value="253" />
+	</bean>
+	
+	<bean id="workplan10" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+		<property name="workload" value="55.0" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="executionPeriod" value="568" />
+	</bean>
+	
+	<bean id="workplan11" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+		<property name="workload" value="65.0" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="executionPeriod" value="349" />
+	</bean>
+	
+	<bean id="workplan12" class="acme.entities.workplans.Workplan">
+
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+		<property name="workload" value="56.0" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="executionPeriod" value="286" />
 	</bean>
 	
 	
-		<!-- Managers -->
+	<bean id="workplan13" class="acme.entities.workplans.Workplan">
 
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+		<property name="workload" value="49.0" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="executionPeriod" value="198" />
+		
+	</bean>
+
+	<bean id="workplan14" class="acme.entities.workplans.Workplan">
+		<property name="startDate" value="2021/03/01 00:00" />
+		<property name="endDate" value="2021/04/19 00:00" />
+		<property name="workload" value="49.0" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="executionPeriod" value="456" />
+	</bean>
+
+	
+	
+	
+	<!-- Managers -->
 	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="manager1"/>
 		<property name="password" value="manager1"/>
