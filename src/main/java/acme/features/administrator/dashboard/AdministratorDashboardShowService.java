@@ -99,10 +99,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		totalNumberOfFinishedTasks = this.repository.totalNumberOfFinishedTasks();
 		totalNumberOfNonFinishedTasks = totalNumberOfTasks - totalNumberOfFinishedTasks;
 		
-		averageTaskExecutionPeriod = this.repository.averageTaskExecutionPeriod();
-		deviationTaskExecutionPeriod = this.repository.deviationTaskExecutionPeriod();
-		minTaskExecutionPeriod = this.repository.minTaskExecutionPeriod();
-		maxTaskExecutionPeriod = this.repository.maxTaskExecutionPeriod();
+//		averageTaskExecutionPeriod = this.repository.averageTaskExecutionPeriod();
+//		deviationTaskExecutionPeriod = this.repository.deviationTaskExecutionPeriod();
+//		minTaskExecutionPeriod = this.repository.minTaskExecutionPeriod();
+//		maxTaskExecutionPeriod = this.repository.maxTaskExecutionPeriod();
 		
 		averageTaskWorkload = this.repository.averageTaskWorkload();
 		deviationTaskWorkload = this.repository.deviationTaskWorkload();
@@ -115,10 +115,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		totalNumberOfFinishedWorkplans = this.repository.totalNumberOfFinishedWorkplans();
 		totalNumberOfNonFinishedWorkplans = totalNumberOfWorkplans - totalNumberOfFinishedWorkplans;
 		
-		averageWorkplanExecutionPeriod = this.repository.averageWorkplanExecutionPeriod();
-		deviationWorkplanExecutionPeriod = this.repository.deviationWorkplanExecutionPeriod();
-		minWorkplanExecutionPeriod = this.repository.minWorkplanExecutionPeriod();
-		maxWorkplanExecutionPeriod = this.repository.maxWorkplanExecutionPeriod();
+//		averageWorkplanExecutionPeriod = this.repository.averageWorkplanExecutionPeriod();
+//		deviationWorkplanExecutionPeriod = this.repository.deviationWorkplanExecutionPeriod();
+//		minWorkplanExecutionPeriod = this.repository.minWorkplanExecutionPeriod();
+//		maxWorkplanExecutionPeriod = this.repository.maxWorkplanExecutionPeriod();
 		
 		averageWorkplanWorkload = this.repository.averageWorkplanWorkload();
 		deviationWorkplanWorkload = this.repository.deviationWorkplanWorkload();
@@ -132,10 +132,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setTotalNumberOfFinishedTasks(totalNumberOfFinishedTasks);
 		result.setTotalNumberOfNonFinishedTasks(totalNumberOfNonFinishedTasks);
 		
-		result.setAverageTaskExecutionPeriod(averageTaskExecutionPeriod);
-		result.setDeviationTaskExecutionPeriod(deviationTaskExecutionPeriod);
-		result.setMinTaskExecutionPeriod(minTaskExecutionPeriod);
-		result.setMaxTaskExecutionPeriod(maxTaskExecutionPeriod);
+//		result.setAverageTaskExecutionPeriod(averageTaskExecutionPeriod);
+//		result.setDeviationTaskExecutionPeriod(deviationTaskExecutionPeriod);
+//		result.setMinTaskExecutionPeriod(minTaskExecutionPeriod);
+//		result.setMaxTaskExecutionPeriod(maxTaskExecutionPeriod);
 		
 		result.setAverageTaskWorkload(averageTaskWorkload);
 		result.setDeviationTaskWorkload(deviationTaskWorkload);
@@ -147,10 +147,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setTotalNumberOfFinishedWorkplans(totalNumberOfFinishedWorkplans);
 		result.setTotalNumberOfNonFinishedWorkplans(totalNumberOfNonFinishedWorkplans);
 		
-		result.setAverageWorkplanExecutionPeriod(averageWorkplanExecutionPeriod);
-		result.setDeviationWorkplanExecutionPeriod(deviationWorkplanExecutionPeriod);
-		result.setMinWorkplanExecutionPeriod(minWorkplanExecutionPeriod);
-		result.setMaxWorkplanExecutionPeriod(maxWorkplanExecutionPeriod);
+//		result.setAverageWorkplanExecutionPeriod(averageWorkplanExecutionPeriod);
+//		result.setDeviationWorkplanExecutionPeriod(deviationWorkplanExecutionPeriod);
+//		result.setMinWorkplanExecutionPeriod(minWorkplanExecutionPeriod);
+//		result.setMaxWorkplanExecutionPeriod(maxWorkplanExecutionPeriod);
 		
 		result.setAverageWorkplanWorkload(averageWorkplanWorkload);
 		result.setDeviationWorkplanWorkload(deviationWorkplanWorkload);

@@ -58,9 +58,6 @@ public class Workplan extends DomainEntity {
 	@NotNull
 	protected Visibility		visibility;
 	
-	protected Long executionPeriod;
-
-
 	public Double calculateWorkload() {
 
 		final Set<Task> tasks = this.getTasks();
