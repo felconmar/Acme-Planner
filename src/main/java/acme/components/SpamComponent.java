@@ -114,6 +114,7 @@ public class SpamComponent {
 	public static final  boolean exceedsThreshold(final Double threshold,  final int spamCounter, final int totalWordsCounter) {
 
 		boolean res=false;
+
 		final Double percentageSpam = ((double)spamCounter/totalWordsCounter)*100;
 		
 		if(percentageSpam>=threshold) res = true;
