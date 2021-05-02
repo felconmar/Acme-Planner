@@ -87,12 +87,15 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			assert request != null;
 			assert entity != null;
 			assert errors != null;
-
-			final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
-			final List<Word> spamWords= this.wordSpamRepository.findMany();
-			assert !SpamComponent.containSpam(entity.getTitle(),spamWords, threshold);
-			assert !SpamComponent.containSpam(entity.getDescription(),spamWords, threshold);
-			assert !SpamComponent.containSpam(entity.getOptionalLink(),spamWords, threshold);
+			assert entity.getStartDate().before(entity.getEndDate());
+			assert entity.getWorkload()>=0;
+			
+		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
+		final List<Word> spamWords= this.wordSpamRepository.findMany();
+		assert !SpamComponent.containSpam(entity.getTitle(),spamWords, threshold);
+		assert !SpamComponent.containSpam(entity.getDescription(),spamWords, threshold);
+		assert !SpamComponent.containSpam(entity.getOptionalLink(),spamWords, threshold);
+		
 		}
 
 		@Override

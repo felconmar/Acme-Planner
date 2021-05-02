@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tasks.Task;
+import acme.entities.tasks.Visibility;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
@@ -18,7 +19,16 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int id;
+		Task task;
+
+		id = request.getModel().getInteger("id");
+		task = this.repository.findOneTaskFromId(id);
+		result = task.getVisibility().equals(Visibility.PUBLIC) && !task.getFinished();
+
+		return result;
 	}
 
 	@Override
@@ -27,7 +37,7 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility");
+		request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility", "finished");
 		
 	}
 
@@ -43,5 +53,6 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 
 		return result;
 	}
+	
 
 }

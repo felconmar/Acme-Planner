@@ -11,5 +11,4 @@
 	<acme:list-column code="authenticated.task.list.label.description" path="description" width="10%"/>
 	<acme:list-column code="authenticated.task.list.label.visibility" path="visibility" width="10%"/>
 	<acme:list-column code="authenticated.task.list.label.optionalLink" path="optionalLink" width="10%"/>
-	<acme:list-column code="authenticated.task.list.label.executionPeriod" path="executionPeriod" width="10%"/>
 </acme:list>

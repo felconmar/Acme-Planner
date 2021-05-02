@@ -6,6 +6,8 @@ manager.task.list.label.description = Description
 manager.task.list.label.optionalLink = Optional link
 manager.task.list.label.executionPeriod = Execution Period
 manager.task.list.label.visibility = Visibility
+manager.task.form.label.visibility.PRIVATE = Private
+manager.task.form.label.visibility.PUBLIC = Public
 
 manager.task.form.label.title = Title
 manager.task.form.label.startDate = Start date time
@@ -17,5 +19,3 @@ manager.task.form.label.visibility = Visibility
 manager.task.form.label.executionPeriod = Execution Period
 manager.task.form.button.create = Create
 manager.task.form.button.return = Return
-manager.task.form.button.update = Update
-manager.task.form.button.delete = Delete
