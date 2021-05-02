@@ -1,4 +1,4 @@
-package acme.features.authenticated.task;
+package acme.features.manager.task;
 
 import java.util.Collection;
 
@@ -9,10 +9,7 @@ import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedTaskRepository extends AbstractRepository {
-
-	@Query("select t from Task t where t.finished = true and t.visibility = 1 order By t.workload")
-	Collection<Task> findEndedPublicTasks();
+public interface ManagerTaskRepository extends AbstractRepository {
 
 	@Query("select t from Task t")
 	Collection<Task> findMany();

@@ -94,13 +94,13 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 		
+		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
 		final List<Word> spamWords= this.wordSpamRepository.findMany();
+
 		final Double threshold= this.spamRepository.findUniqueSpamModule().getThreshold();
 		assert !SpamComponent.containSpam(entity.getText(),spamWords,threshold);
 		assert !SpamComponent.containSpam(entity.getAuthor(),spamWords,threshold);
 		assert !SpamComponent.containSpam(entity.getInfo(),spamWords,threshold);
-
-		
 	}
 
 	@Override

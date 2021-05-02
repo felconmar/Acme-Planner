@@ -137,7 +137,6 @@
 				<ref bean="task01" />
 			</list>
 		</property>
-
 		<property name="workload" value="0.0" />
 		<property name="visibility" value="PUBLIC" />
 	</bean>
@@ -202,5 +201,50 @@
 		<property name="userAccount" ref="manager1UserAccount"/>
 	</bean>
 	
+
+	<!-- Spam Words-->
+	<bean name="word1" class="acme.entities.words.Word">
+		<property name="word" value="sex"/>
+	</bean>
+	
+	<bean name="word2" class="acme.entities.words.Word">
+		<property name="word" value="hard core"/>
+	</bean>
+	
+	<bean name="word3" class="acme.entities.words.Word">
+		<property name="word" value="viagra"/>
+	</bean>
+	
+	<bean name="word4" class="acme.entities.words.Word">
+		<property name="word" value="cialis"/>
+	</bean>
+	
+	<bean name="word5" class="acme.entities.words.Word">
+		<property name="word" value="nigeria"/>
+	</bean>
+	
+	<bean name="word6" class="acme.entities.words.Word">
+		<property name="word" value="you’ve won"/>
+	</bean>
+	
+	<bean name="word7" class="acme.entities.words.Word">
+		<property name="word" value="million dollar"/>
+	</bean>
+	
+	<bean name="word8" class="acme.entities.words.Word">
+		<property name="word" value="sexo"/>
+	</bean>
+	
+	<bean name="word9" class="acme.entities.words.Word">
+		<property name="word" value="duro"/>
+	</bean>
+	
+	<bean name="word10" class="acme.entities.words.Word">
+		<property name="word" value="has ganado"/>
+	</bean>
+	
+	<bean name="word11" class="acme.entities.words.Word">
+		<property name="word" value="millón de dólares"/>
+	</bean>
 
 </beans>

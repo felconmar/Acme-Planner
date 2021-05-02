@@ -1,22 +1,19 @@
-package acme.features.authenticated.task;
-
-import java.util.Collection;
+package acme.features.manager.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedTaskListService implements AbstractListService<Authenticated, Task>{
-
+public class ManagerTaskShowService implements AbstractShowService<Manager, Task>{
 	@Autowired
-	AuthenticatedTaskRepository repository;
-	
+	ManagerTaskRepository repository;
+
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
@@ -28,16 +25,21 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
+
 		request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility", "executionPeriod");
-		
+
 	}
 
 	@Override
-	public Collection<Task> findMany(final Request<Task> request) {
+	public Task findOne(final Request<Task> request) {
 		assert request != null;
-		Collection<Task> result;
-		result = this.repository.findEndedPublicTasks();
+
+		Task result;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneTaskFromId(id);
+
 		return result;
 	}
 }
