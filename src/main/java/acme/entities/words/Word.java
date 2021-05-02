@@ -29,10 +29,7 @@ public class Word extends DomainEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-	
-	
-	
-	
+
 	@NotBlank
 	protected String word;
 

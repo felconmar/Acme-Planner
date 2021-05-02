@@ -57,7 +57,7 @@ public class AdministratorWordUpdateService implements AbstractUpdateService<Adm
 
 		request.unbind(entity, model, "word");
 		
-		//model.setAttribute("spamWords", spamWords);
+		
 		
 	}
 
