@@ -10,7 +10,7 @@ public class SpamComponent {
 	
 	
 	
-	public static boolean containSpam(final String text, final List<Word> spamWords) {
+	public static boolean containSpam(final String text, final List<Word> spamWords, final Double threshold) {
 		final List<String> stringSpamWords= SpamComponent.listWordsToStrings(spamWords);
 		final List<List<String>> composedSpamWords = SpamComponent.getComposedSpamWords(stringSpamWords);
 		final List<String> wordsInput= SpamComponent.formatWordsInput(text);
@@ -50,7 +50,7 @@ public class SpamComponent {
 				}
 			}
 		
-		return SpamComponent.exceedsThreshold(10.0, spamCounter, totalWordsCounter);
+		return SpamComponent.exceedsThreshold(threshold, spamCounter, totalWordsCounter);
 	
 		}
 	
@@ -114,10 +114,10 @@ public class SpamComponent {
 	public static final  boolean exceedsThreshold(final Double threshold,  final int spamCounter, final int totalWordsCounter) {
 
 		boolean res=false;
-		final Double spamThreshold = 10.0;
+		
 		final Double percentageSpam = ((double)spamCounter/totalWordsCounter)*100;
 		
-		if(percentageSpam>=spamThreshold) res = true;
+		if(percentageSpam>=threshold) res = true;
 		return res;
 		
 	}
