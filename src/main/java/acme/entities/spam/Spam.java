@@ -12,15 +12,11 @@
 
 package acme.entities.spam;
 
-import java.util.Collection;
-
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
-import acme.entities.words.Word;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -44,6 +40,4 @@ public class Spam extends DomainEntity {
 
 	// Relationships ----------------------------------------------------------
 	
-	@OneToMany
-	protected Collection<Word> spamWords;
 }

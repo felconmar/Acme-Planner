@@ -30,9 +30,6 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 	@Autowired
 	protected AdministratorWordRepository repository;
 
-	// AbstractDeleteService<Employer, Job> interface -------------------------
-
-
 	@Override
 	public boolean authorise(final Request<Word> request) {
 		assert request != null;
