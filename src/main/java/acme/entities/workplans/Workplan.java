@@ -13,20 +13,13 @@
 package acme.entities.workplans;
 
 import java.util.Date;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
-import acme.entities.tasks.Task;
-import acme.entities.tasks.Visibility;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,34 +33,20 @@ public class Workplan extends DomainEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected Date			startDate;
+	protected Date				startDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
 
 	@NotNull
-	protected Date			endDate;
-
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "workplan_task", joinColumns = @JoinColumn(name = "workplan_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "task_id", referencedColumnName = "id"))
-	protected Set<Task>			tasks;
+	protected Date				endDate;
 
 	@Digits(integer = 2, fraction = 2)
 	protected Double			workload;
 
-	@NotNull
-	protected Visibility		visibility;
+	protected boolean			publicWorkPlan;
 
+	protected boolean			published;
 
-	public Double calculateWorkload() {
-
-		final Set<Task> tasks = this.getTasks();
-
-		if (tasks.isEmpty()) {
-			return 0.0;
-		} else {
-			return tasks.stream().mapToDouble(x -> x.getWorkload()).sum();
-		}
-
-	}
+	
 
 }
