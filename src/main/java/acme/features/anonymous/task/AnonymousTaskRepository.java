@@ -12,10 +12,12 @@ import acme.framework.repositories.AbstractRepository;
 public interface AnonymousTaskRepository extends AbstractRepository {
 	
 
-	@Query("select t from Task t where t.endDate >= CURRENT_TIMESTAMP")
+	@Query("select t from Task t where t.finished = false")
 	Collection<Task> findNotEndedTask();
 
 	@Query("select t from Task t")
 	Collection<Task> findMany();
 
+	@Query("select t from Task t where t.id = ?1")
+	Task findOneTaskFromId(int id);
 }

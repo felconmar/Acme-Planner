@@ -56,6 +56,7 @@ public class AdministratorWordListService implements AbstractListService<Adminis
 		final Collection<Word> result;
 
 		result = this.repository.findMany();
+		final int a=0;
 
 		return result;
 	}

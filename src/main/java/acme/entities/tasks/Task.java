@@ -27,14 +27,11 @@ public class Task extends DomainEntity{
 	@Length(min = 2, max = 80)
 	protected String title;
 	
-	@NotBlank
-	protected String visibility;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				startDate;
 
-	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	protected Date				endDate;
@@ -49,9 +46,18 @@ public class Task extends DomainEntity{
 	@URL
 	protected String optionalLink;
 	
-
+	@NotNull
+	protected Visibility visibility;
+	
+	@NotNull
+	protected Boolean finished;
 	
 	
 	
+	protected Long executionPeriod;
+	
+	public long calculateExecutionPeriod() {
+		return (this.getEndDate().getTime() / 3600000) - (this.getStartDate().getTime() / 3600000);
+	}
 
 }

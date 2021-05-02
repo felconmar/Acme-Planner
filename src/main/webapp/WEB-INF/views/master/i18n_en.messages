@@ -32,6 +32,7 @@ master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.create-shout = Shout!
 master.menu.anonymous.list-task-not-ended = List tasks not ended
+master.menu.anonymous.list-shouts = List of shouts
 
 # master.menu.autheticated #######################################################
 
@@ -53,6 +54,14 @@ master.menu.administrator.spam= Spam Module
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 
+# master.menu.manager ########################################################
+
+master.menu.manager = Manager
+master.menu.manager.favourite-link = Favourite link
+master.menu.manager.listed-task = List tasks
+master.menu.manager.created-task = Create task
+
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
@@ -66,6 +75,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.manager = Manager data
+master.menu.user-account.become-manager = Become a manager
 
 # master.footer ###############################################################
 

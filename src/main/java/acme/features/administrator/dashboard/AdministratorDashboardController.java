@@ -1,5 +1,5 @@
 /*
- 
+ * AdministratorDashboardController.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.manager.userAccount;
+package acme.features.administrator.dashboard;
 
 import javax.annotation.PostConstruct;
 
@@ -18,30 +18,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.roles.Manager;
+import acme.forms.Dashboard;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.UserAccount;
+import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/manager/user-account/")
-public class ManagerUserAccountController extends AbstractController<Manager, UserAccount> {
+@RequestMapping("/administrator/dashboard/")
+public class AdministratorDashboardController extends AbstractController<Administrator, Dashboard> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected ManagerUserAccountCreateService createService;
-	
-	@Autowired
-	protected ManagerUserAccountListService	listService;
+	protected AdministratorDashboardShowService showService;
 
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }

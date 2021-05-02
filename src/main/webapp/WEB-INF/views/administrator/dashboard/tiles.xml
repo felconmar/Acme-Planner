@@ -17,13 +17,9 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-
-	<definition name="manager/user-account/list" extends="master">		
-		<put-attribute name="body" type="template" value="../manager/user-account/list.jsp" />
-	</definition>
 	
-	<definition name="manager/user-account/form" extends="master">
-		<put-attribute name="body" type="template" value="../manager/user-account/form.jsp" />
+	<definition name="administrator/dashboard/form" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/dashboard/form.jsp" />
 	</definition>
 
 </tiles-definitions>

@@ -13,11 +13,16 @@
 package acme.features.anonymous.shout;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamComponent;
 import acme.entities.shouts.Shout;
+import acme.entities.words.Word;
+import acme.features.administrator.spam.AdministratorSpamRepository;
+import acme.features.administrator.word.AdministratorWordRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -31,6 +36,12 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 
 	@Autowired
 	protected AnonymousShoutRepository repository;
+	
+	@Autowired
+	protected AdministratorWordRepository wordSpamRepository;
+	
+	@Autowired
+	protected AdministratorSpamRepository spamRepository;
 
 	// AbstractCreateService<Administrator, Shout> interface --------------
 
@@ -82,7 +93,14 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
+		final List<Word> spamWords= this.wordSpamRepository.findMany();
+		assert !SpamComponent.containSpam(entity.getText(),spamWords, threshold);
+		assert !SpamComponent.containSpam(entity.getAuthor(),spamWords, threshold);
+		assert !SpamComponent.containSpam(entity.getInfo(),spamWords, threshold);
 
+		
 	}
 
 	@Override
