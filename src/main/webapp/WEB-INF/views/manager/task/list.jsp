@@ -14,5 +14,5 @@
 	<acme:list-column code="manager.task.list.label.executionPeriod" path="executionPeriod" width="10%"/>
 </acme:list>
 <acme:form>
-	<acme:form-submit code="master.menu.manager.created-task" action="/manager/task/create" />
+	<acme:form-submit code="master.menu.manager.created-task" action="/manager/task/create" method="get"/>
 </acme:form>

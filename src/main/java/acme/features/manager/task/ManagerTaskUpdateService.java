@@ -54,7 +54,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility", "executionPeriod");
+		request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility", "finished", "executionPeriod");
 	}
 
 	@Override
@@ -68,6 +68,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		assert entity.getStartDate().before(entity.getEndDate());
 		
 		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
 		final List<Word> spamWords= this.wordSpamRepository.findMany();
@@ -80,6 +81,9 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	public void update(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
+		
+		final Long executionPeriod= entity.calculateExecutionPeriod();
+        entity.setExecutionPeriod(executionPeriod);
 
 		this.repository.save(entity);
 	}
