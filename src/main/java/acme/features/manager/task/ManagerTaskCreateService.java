@@ -93,7 +93,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert !SpamComponent.containSpam(entity.getTitle(),spamWords, threshold);
 		assert !SpamComponent.containSpam(entity.getDescription(),spamWords, threshold);
 		assert !SpamComponent.containSpam(entity.getOptionalLink(),spamWords, threshold);
-		
 		}
 
 		@Override
