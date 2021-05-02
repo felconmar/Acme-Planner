@@ -1,6 +1,7 @@
 package acme.features.manager.task;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -87,6 +88,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			assert entity != null;
 			assert errors != null;
 			assert entity.getStartDate().before(entity.getEndDate());
+			assert entity.getWorkload()>=0;
 			
 		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
 		final List<Word> spamWords= this.wordSpamRepository.findMany();
