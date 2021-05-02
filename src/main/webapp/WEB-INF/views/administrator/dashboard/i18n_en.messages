@@ -29,6 +29,22 @@ administrator.dashboard.form.label.deviation-task-workload = Deviation of tasks 
 administrator.dashboard.form.label.maximum-task-workload = Maximum task workload
 administrator.dashboard.form.label.minimum-task-workload = Minimum task workload
 
+administrator.dashboard.form.label.total-number-of-public-workplans = Total number of public workplans
+administrator.dashboard.form.label.total-number-of-private-workplans = Total number of private workplans
+administrator.dashboard.form.label.total-number-of-finished-workplans = Total number of finished workplans
+administrator.dashboard.form.label.total-number-of-non-finished-workplans = Total number of non-finished workplans
+
+administrator.dashboard.form.label.average-workplan-execution-period = Average of workplans execution period
+administrator.dashboard.form.label.deviation-workplan-execution-period = Deviation of workplans execution period
+administrator.dashboard.form.label.maximum-workplan-execution-period = Maximum workplan execution period
+administrator.dashboard.form.label.minimum-workplan-execution-period = Minimum workplan execution period
+
+administrator.dashboard.form.title.workplan-workload = Workplan Workload
+administrator.dashboard.form.label.average-workplan-workload = Average of workplans workload
+administrator.dashboard.form.label.deviation-workplan-workload = Deviation of workplans workload
+administrator.dashboard.form.label.maximum-workplan-workload = Maximum workplan workload
+administrator.dashboard.form.label.minimum-workplan-workload = Minimum workplan workload
+
 
 administrator.dashboard.form.title.application-statuses = Application statuses
 

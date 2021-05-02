@@ -43,7 +43,13 @@ public class Workplan extends DomainEntity {
 	@Digits(integer = 2, fraction = 2)
 	protected Double			workload;
 
+
+	protected Visibility		visibility;
+	
+	protected Long executionPeriod;
+
 	protected boolean			publicWorkPlan;
+
 
 	protected boolean			published;
 

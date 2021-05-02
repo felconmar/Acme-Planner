@@ -346,6 +346,7 @@
 		<property name="workload" value="56.0" />
 		<property name="visibility" value="PRIVATE" />
 		<property name="executionPeriod" value="286" />
+
 	</bean>
 	
 	
