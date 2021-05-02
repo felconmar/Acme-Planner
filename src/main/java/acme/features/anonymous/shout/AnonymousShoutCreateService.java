@@ -21,7 +21,6 @@ import org.springframework.stereotype.Service;
 import acme.components.SpamComponent;
 import acme.entities.shouts.Shout;
 import acme.entities.words.Word;
-import acme.features.administrator.spam.AdministratorSpamRepository;
 import acme.features.administrator.word.AdministratorWordRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -39,9 +38,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	
 	@Autowired
 	protected AdministratorWordRepository wordSpamRepository;
-	
-	@Autowired
-	protected AdministratorSpamRepository spamRepository;
 
 	// AbstractCreateService<Administrator, Shout> interface --------------
 
@@ -94,7 +90,6 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 		
-		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
 		final List<Word> spamWords= this.wordSpamRepository.findMany();
 
 		final Double threshold= this.spamRepository.findUniqueSpamModule().getThreshold();
