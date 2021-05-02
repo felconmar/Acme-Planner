@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 public interface AnonymousTaskRepository extends AbstractRepository {
 	
 
-	@Query("select t from Task t where t.finished = false")
+	@Query("select t from Task t where t.finished = false and t.visibility = 1")
 	Collection<Task> findNotEndedTask();
 
 	@Query("select t from Task t")
