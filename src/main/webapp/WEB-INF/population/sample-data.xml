@@ -15,35 +15,37 @@
 <import resource="classpath:/WEB-INF/population/conversion-service.xml" />
 
 <!-- Managers -->
-	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager1"/>
-		<property name="password" value="manager1"/>
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager"/>
-				<property name="surname" value="One"/>
-				<property name="email" value="manager1@mail.com"/>
-				
-			</bean>
-		</property>
-		<property name="enabled" value="true"/>		
-		<property name="roles">
-			<list>
-				<ref bean="manager1Manager"/>
-				<ref bean="manager1Authenticated"/>
-			</list>
-		</property>
-	</bean>
+    <bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
+        <property name="username" value="manager1"/>
+        <property name="password" value="manager1"/>
+        <property name="identity">
+            <bean class="acme.datatypes.UserIdentity">
+                <property name="name" value="Manager"/>
+                <property name="surname" value="One"/>
+                <property name="email" value="manager1@mail.com"/>
+            </bean>
+        </property>
+        <property name="enabled" value="true"/>
+        <property name="roles">
+            <list>
+                <ref bean="manager1Manager"/>
+                <ref bean="manager1Authenticated"/>
+            </list>
+        </property>
+    </bean>
 
-	<bean name="manager1Manager" class="acme.entities.roles.Manager">
-		
-		<property name="userAccount" ref="manager1UserAccount"/>
-	</bean>
+    <bean name="manager1Manager" class="acme.entities.roles.Manager">
+        <property name="userAccount" ref="manager1UserAccount"/>
+    </bean>
 
-	<bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager1UserAccount"/>
-	</bean>
-	
+    <bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
+        <property name="userAccount" ref="manager1UserAccount"/>
+    </bean>
+    
+   
+     
+  
+    
 	<!-- Shouts -->
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
@@ -101,10 +103,32 @@
 		<property name="moment" value="2021/05/01 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
+	
+	<bean id="shout09" class="acme.entities.shouts.Shout">
+		<property name="author" value="Miguel"/>
+		<property name="text" value="Shoutin'"/>
+		<property name="moment" value="2021/04/03 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+		
+	<bean id="shout10" class="acme.entities.shouts.Shout">
+		<property name="author" value="Miguel"/>
+		<property name="text" value="Shoutin'"/>
+		<property name="moment" value="2021/04/02 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout11" class="acme.entities.shouts.Shout">
+		<property name="author" value="Miguel"/>
+		<property name="text" value="Shoutin'"/>
+		<property name="moment" value="2021/04/04 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
 
 	<!-- TASK's -->
 	
-	<!--  
+
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 1" />
 		<property name="startDate" value="2021/07/08 00:00" />
@@ -294,16 +318,6 @@
 		<property name="manager" ref="manager1Manager"/>
 		
 	</bean>
-
-	
-	-->
-	
-	
-
-	
-	
-	
-
 	<!-- Spam Words-->
 	<bean name="word1" class="acme.entities.words.Word">
 		<property name="word" value="sex"/>
