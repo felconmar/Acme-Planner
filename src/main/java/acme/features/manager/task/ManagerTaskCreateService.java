@@ -78,6 +78,9 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			result.setVisibility(Visibility.PUBLIC);
 			result.setExecutionPeriod(12l);
 			result.setFinished(true);
+			
+			final Manager manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
+			result.setManager(manager);
 
 			return result;
 		}
@@ -102,6 +105,9 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		public void create(final Request<Task> request, final Task entity) {
 			assert request != null;
 			assert entity != null;
+			
+			final Manager manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
+			entity.setManager(manager);
 			
 			final Boolean finished = false;
 			entity.setFinished(finished);

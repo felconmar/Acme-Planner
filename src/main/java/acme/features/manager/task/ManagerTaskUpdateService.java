@@ -16,6 +16,7 @@ import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.components.Response;
+import acme.framework.entities.Principal;
 import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractUpdateService;
 
@@ -36,7 +37,18 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int taskId;
+		Task task;
+		Manager manager;
+		Principal principal;
+
+		taskId = request.getModel().getInteger("id");
+		task = this.repository.findOneTaskFromId(taskId);
+		manager = task.getManager();
+		principal = request.getPrincipal();
+		result =manager.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override

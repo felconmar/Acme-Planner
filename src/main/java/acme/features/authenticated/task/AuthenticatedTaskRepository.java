@@ -11,7 +11,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedTaskRepository extends AbstractRepository {
 
-	@Query("select t from Task t where t.endDate < CURRENT_TIMESTAMP and t.visibility = 'Public'")
+	@Query("select t from Task t where t.finished=true and t.visibility = 'Public'")
 	Collection<Task> findEndedPublicTasks();
 
 	@Query("select t from Task t")
