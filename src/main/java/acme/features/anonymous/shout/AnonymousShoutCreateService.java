@@ -95,11 +95,19 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert errors != null;
 		
 		final List<Word> spamWords= this.wordSpamRepository.findMany();
-
 		final Double threshold= this.spamRepository.findUniqueSpamModule().getThreshold();
-		assert !SpamComponent.containSpam(entity.getText(),spamWords,threshold);
-		assert !SpamComponent.containSpam(entity.getAuthor(),spamWords,threshold);
-		assert !SpamComponent.containSpam(entity.getInfo(),spamWords,threshold);
+		
+		if (!errors.hasErrors("text")) {
+            errors.state(request,!SpamComponent.containSpam(entity.getText(),spamWords,threshold) , "text", "anonymous.shout.form.text.error.spam");
+        }
+        if (!errors.hasErrors("info")) {
+            errors.state(request,!SpamComponent.containSpam(entity.getInfo(),spamWords,threshold) , "info", "anonymous.shout.form.info.error.spam");
+        }
+        if (!errors.hasErrors("author")) {
+            errors.state(request,!SpamComponent.containSpam(entity.getAuthor(),spamWords,threshold) , "author", "anonymous.shout.form.author.error.spam");
+        }
+       
+      
 	}
 
 	@Override

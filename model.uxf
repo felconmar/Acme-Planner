@@ -1,154 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>6</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>216</x>
-      <y>342</y>
-      <w>204</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Job
---
-+ reference: String {Unique, NotBlank, Length(5, 60)}
-+ title: String {NotBlank}
-+ deadline: String {TimeStamp}
-+ salary: Money
-+ score: double {Range(0, 100), Digits(integer=2, fraction=2)}
-+ description: String {NotBlank}
-+ moreInfo: String {Url}
-+ finalMode: boolean
-+ / isAvailable: boolean</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>444</x>
-      <y>342</y>
-      <w>126</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Role&gt;&gt;
-Employer
---
-+ company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>582</x>
-      <y>342</y>
-      <w>132</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Role&gt;&gt;
-Worker
---
-+ skills: String {NotBull}
-+ qualifications: String {NotNull}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>276</x>
-      <y>534</y>
-      <w>132</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Application
---
-+ reference: String {Unique}
-+ moment: Date {Timestamp}
-+ status: ApplicationStatus
-+ statement: String {NotBlank}
-+ skills: String {NotBlank}
-+ qualifications: String {NotBlank}
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>402</x>
-      <y>390</y>
-      <w>270</w>
-      <h>204</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-m1=*
-m2=1
-made by &gt;</panel_attributes>
-    <additional_attributes>10.0;310.0;420.0;310.0;420.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>324</x>
-      <y>456</y>
-      <w>48</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-m1=*
-m2=1
-About ^</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>414</x>
-      <y>390</y>
-      <w>126</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-m1=*
-m2=1
-Offered by &gt;</panel_attributes>
-    <additional_attributes>10.0;60.0;180.0;60.0;180.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>66</x>
-      <y>408</y>
-      <w>120</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>A job is available if it's 
-in final mode and its deadline 
-hasn't elapsed.
-bg=blue</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>180</x>
-      <y>426</y>
-      <w>48</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=..
-</panel_attributes>
-    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>750</x>
-      <y>366</y>
-      <w>126</w>
-      <h>60</h>
+      <x>445</x>
+      <y>175</y>
+      <w>105</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 ApplicationStatus
@@ -162,30 +21,10 @@ ApplicationStatus
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>714</x>
-      <y>462</y>
-      <w>210</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Form&gt;&gt;
-Dashboard
---
-+ averageNumberOfJobsPerEmployer: double
-+ averageNumberOfApplicationsPerWorker: double
-+ avegageNumberOfApplicationsPerEmployer: double
-+ ratioOfPendingApplications: double
-+ ratioOfAcceptedApplications: double
-+ ratioOfRejectedApplications: double
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>510</x>
-      <y>258</y>
-      <w>144</w>
-      <h>36</h>
+      <x>240</x>
+      <y>90</y>
+      <w>120</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 UserRole
@@ -196,21 +35,21 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>288</y>
-      <w>84</w>
-      <h>66</h>
+      <x>290</x>
+      <y>115</y>
+      <w>15</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>198</y>
-      <w>132</w>
-      <h>72</h>
+      <x>50</x>
+      <y>55</y>
+      <w>110</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Datatype&gt;&gt;
 UserIdentity
@@ -227,10 +66,10 @@ bg=orange
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>210</x>
-      <y>144</y>
-      <w>144</w>
-      <h>36</h>
+      <x>50</x>
+      <y>0</y>
+      <w>120</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>The full name catenates the 
 surname, a comma, and the name.
@@ -240,33 +79,22 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>174</y>
-      <w>18</w>
-      <h>36</h>
+      <x>100</x>
+      <y>25</y>
+      <w>15</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>570</x>
-      <y>288</y>
-      <w>90</w>
-      <h>66</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;90.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>270</y>
-      <w>60</w>
-      <h>18</h>
+      <x>395</x>
+      <y>100</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Administrator
 --
@@ -277,10 +105,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>246</y>
-      <w>60</w>
-      <h>18</h>
+      <x>395</x>
+      <y>80</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Anonymous
 --
@@ -291,10 +119,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>294</y>
-      <w>60</w>
-      <h>18</h>
+      <x>395</x>
+      <y>120</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Authenticated
 --
@@ -305,10 +133,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>252</y>
-      <w>60</w>
-      <h>36</h>
+      <x>355</x>
+      <y>85</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;40.0;80.0;10.0</additional_attributes>
@@ -316,10 +144,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>270</y>
-      <w>60</w>
-      <h>18</h>
+      <x>355</x>
+      <y>100</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
@@ -327,10 +155,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>270</y>
-      <w>60</w>
-      <h>42</h>
+      <x>355</x>
+      <y>100</y>
+      <w>50</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;50.0</additional_attributes>
@@ -338,43 +166,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
-      <y>198</y>
-      <w>132</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Datatype&gt;&gt;
-Money
---
-+ amount: double {Digits(10, 2)}
-+ currentcy: String {NotBlank}
-
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>726</x>
-      <y>582</y>
-      <w>138</w>
-      <h>66</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-SimpleClass
---
-+ slogan: String {NotBlank}
-+ picture: String {NotBlank, URL}
-+ target: String {NotBlank, URL}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>588</x>
-      <y>96</y>
-      <w>228</w>
-      <h>72</h>
+      <x>200</x>
+      <y>285</y>
+      <w>190</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Task
@@ -382,9 +177,136 @@ Task
 + title: String {NotBlank, Lenght(2,80}
 + startDate: Date {NotNull, Temporal(TIMESTAMP)}
 + endDate: Date {NotNull, Temporal(TIMESTAMP)}
-+ workload: double Digits(integer=2, fraction=2)}
++ workload: double Digits(integer=2, fraction=2), Min(0)}
 + description: String {NotBlank, Lenght(8,500}
-+ optionalLink: String {URL}</panel_attributes>
++ optionalLink: String {URL}
++ visibility: Visibility {NotNull}
++ finished: Boolean {NotNull}
++ executionPeriod: Long {Min(0)}
++ /calculateExecutionPeriod: Long
+
+
+</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>165</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Manager
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>80</y>
+      <w>190</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Shout
+--
++ moment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ author: String {NotBlank,Length(5, 25)}
++ text: String {NotBlank,Length(max=100)}
++ info: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5</x>
+      <y>190</y>
+      <w>205</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Spam
+--
++ threshold: Double {Digits(integer=3, fraction=2),Range(0, 100)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>255</y>
+      <w>70</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Visibility
+--
++ PRIVATE
++ PUBLIC
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>35</x>
+      <y>135</y>
+      <w>95</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Word
+--
++ word: String {NotBlank}
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>445</x>
+      <y>250</y>
+      <w>175</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Dashboard
+--
++ totalNumberOfPublicTasks: Integer						
++ totalNumberOfPrivateTasks: Integer						
++ totalNumberOfFinishedTasks: 	Integer						
++ totalNumberOfNonFinishedTasks: Integer						
+	
++ averageTaskExecutionPeriod: 	Long 						
++ deviationTaskExecutionPeriod: Long 						
++ minTaskExecutionPeriod: Long 						
++ maxTaskExecutionPeriod: Long 						
+	
++ averageTaskWorkload: Double 						
++ deviationTaskWorkload: Double 						
++ minTaskWorkload:	Double 						
++ maxTaskWorkload: Double 						
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>205</y>
+      <w>60</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=*
+m2=1
+&lt; Managed by</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

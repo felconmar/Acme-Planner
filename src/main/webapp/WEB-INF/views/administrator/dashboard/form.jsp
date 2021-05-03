@@ -230,15 +230,6 @@
 </table>
 
 
-<h2>
-	<acme:message code="administrator.dashboard.form.label.workplan-chart"/>
-</h2>
-
-<div>
-	<canvas id="canvas"></canvas>
-</div>
-
-
 <script type="text/javascript">
 	$(document).ready(function() {
 		var data = {

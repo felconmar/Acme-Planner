@@ -12,7 +12,7 @@
 --%>
 
 <%@page language="java"
-	import="acme.framework.helpers.PrincipalHelper,acme.entities.roles.Provider,acme.entities.roles.Consumer"%>
+	import="acme.framework.helpers.PrincipalHelper"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
@@ -52,28 +52,15 @@
 				action="/authenticated/task/list" />
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.provider"
-			access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link"
-				action="http://www.example.com/" />
-
-		</acme:menu-option>
-		
 		<acme:menu-option code="master.menu.manager"
 			access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.manager.favourite-link"
-				action="http://www.manager.com/" />
+			
 			<acme:menu-suboption code="master.menu.manager.created-task"
 				action="/manager/task/create" />
 			<acme:menu-suboption code="master.menu.manager.listed-task"
 				action="/manager/task/list" />
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.consumer"
-			access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link"
-				action="http://www.example.com/" />
-		</acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>
@@ -86,17 +73,6 @@
 			access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data"
 				action="/authenticated/user-account/update" />
-			<acme:menu-suboption code="master.menu.user-account.become-provider"
-				action="/authenticated/provider/create"
-				access="!hasRole('Provider')" />
-			<acme:menu-suboption code="master.menu.user-account.provider"
-				action="/authenticated/provider/update" access="hasRole('Provider')" />
-			<acme:menu-suboption code="master.menu.user-account.become-consumer"
-				action="/authenticated/consumer/create"
-				access="!hasRole('Consumer')" />
-			<acme:menu-suboption code="master.menu.user-account.consumer"
-				action="/authenticated/consumer/update" access="hasRole('Consumer')" />
-				
 				<acme:menu-suboption code="master.menu.user-account.become-manager"
 				action="/authenticated/manager/create"
 				access="!hasRole('Manager')" />

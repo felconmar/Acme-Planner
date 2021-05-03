@@ -14,17 +14,15 @@ package acme.features.anonymous.shout;
 
 import java.time.Instant;
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.ZoneId;
-import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.UtilComponent;
 import acme.entities.shouts.Shout;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -65,17 +63,10 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 		assert request != null;
 
 		Collection<Shout> result;
-		final List<Shout> list = new ArrayList<Shout>();
-		result = this.repository.findMany().stream().collect(Collectors.toList());
-		
-		for(final Shout s: result) {			
-			if (Period.between(this.convertToLocalDateViaMilisecond(s.getMoment()),LocalDate.now() ).getMonths()<1 && Period.between(this.convertToLocalDateViaMilisecond(s.getMoment()),LocalDate.now() ).getYears()<1) {
-				list.add(s);
-				
-			}		
-			}
-
-		return list;
+		final Date today= new Date();
+		final Date fechaMesAnterior= UtilComponent.addFecha(today, Calendar.MONTH, -1);
+		result = this.repository.findShoutRecent(fechaMesAnterior);
+		return result;
 		
 			
 			

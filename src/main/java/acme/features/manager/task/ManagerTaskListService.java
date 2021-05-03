@@ -29,15 +29,14 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "title", "startDate", "endDate", "workload", "description", "optionalLink", "visibility", "executionPeriod");
-		
+		request.unbind(entity, model, "title", "startDate", "endDate", "workload", "visibility","finished");		
 	}
 
 	@Override
 	public Collection<Task> findMany(final Request<Task> request) {
 		assert request != null;
 		Collection<Task> result;
-		result = this.repository.findMany();
+		result = this.repository.findMyTasks(request.getPrincipal().getActiveRoleId());
 		return result;
 	}
 }
