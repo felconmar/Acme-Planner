@@ -12,5 +12,7 @@
 	<acme:form-url 		code="authenticated.task.form.label.optionalLink" path="optionalLink" readonly="true"/>
 	<acme:form-textbox 	code="authenticated.task.form.label.visibility" path="visibility" readonly="true"/>
 	<acme:form-textbox 	code="authenticated.task.form.label.executionPeriod" path="executionPeriod" readonly="true"/>
+	<acme:form-textbox 	code="authenticated.task.form.label.finished" path="finished" readonly="true"/>
+	
 	<acme:form-return 	code="authenticated.task.form.button.return"/>	
 </acme:form>

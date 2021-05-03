@@ -179,7 +179,7 @@
 		<property name="title" value="Example task 4" />
 		<property name="startDate" value="2021/01/02 00:00" />
 		<property name="endDate" value="2021/01/09 00:00" />
-		<property name="workload" value="3.0" />
+		<property name="workload" value="20.0" />
 		<property name="description"
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"

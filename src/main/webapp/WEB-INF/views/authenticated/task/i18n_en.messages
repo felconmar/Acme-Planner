@@ -14,4 +14,5 @@ authenticated.task.form.label.description = Description
 authenticated.task.form.label.optionalLink = Optional link
 authenticated.task.form.label.visibility = Visibility
 authenticated.task.form.label.executionPeriod = Execution Period
+authenticated.task.form.label.finished = Finished
 authenticated.task.form.button.return = Return
