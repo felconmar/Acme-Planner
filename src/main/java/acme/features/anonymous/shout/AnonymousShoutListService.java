@@ -75,7 +75,7 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 			}		
 			}
 
-		return list;
+		return result;
 		
 			
 			

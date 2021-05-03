@@ -14,10 +14,40 @@
 		
 <import resource="classpath:/WEB-INF/population/conversion-service.xml" />
 
+<!-- Managers -->
+	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager1"/>
+		<property name="password" value="manager1"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Manager"/>
+				<property name="surname" value="One"/>
+				<property name="email" value="manager1@mail.com"/>
+				
+			</bean>
+		</property>
+		<property name="enabled" value="true"/>		
+		<property name="roles">
+			<list>
+				<ref bean="manager1Manager"/>
+				<ref bean="manager1Authenticated"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager1Manager" class="acme.entities.roles.Manager">
+		
+		<property name="userAccount" ref="manager1UserAccount"/>
+	</bean>
+
+	<bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager1UserAccount"/>
+	</bean>
+	
 	<!-- Shouts -->
 	
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/02/13 19:39"/>
+		<property name="moment" value="2021/04/20 19:39"/>
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>	
@@ -31,7 +61,7 @@
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/04/29 00:00"/>
+		<property name="moment" value="2021/05/02 00:00"/>
 		<property name="author" value="Foo Bar"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
@@ -73,6 +103,8 @@
 	</bean>
 
 	<!-- TASK's -->
+	
+	<!--  
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Example task 1" />
 		<property name="startDate" value="2021/07/08 00:00" />
@@ -211,7 +243,7 @@
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="false" />
 		<property name="executionPeriod" value="259" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="manager" ref="manager1Manager"/>
 		
 	</bean>
 	
@@ -227,7 +259,7 @@
 		<property name="visibility" value="PRIVATE" />
 		<property name="finished" value="false" />
 		<property name="executionPeriod" value="320" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="manager" ref="manager1Manager"/>
 		
 	</bean>
 	
@@ -243,7 +275,7 @@
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="false" />
 		<property name="executionPeriod" value="390" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="manager" ref="manager1Manager"/>
 		
 	</bean>
 	
@@ -259,73 +291,16 @@
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="true" />
 		<property name="executionPeriod" value="465" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="manager" ref="manager1Manager"/>
 		
 	</bean>
 
 	
+	-->
 	
 	
-	
-	<!-- Managers -->
-	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager1"/>
-		<property name="password" value="manager1"/>
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager"/>
-				<property name="surname" value="One"/>
-				<property name="email" value="manager1@mail.com"/>
-				
-			</bean>
-		</property>
-		<property name="enabled" value="true"/>		
-		<property name="roles">
-			<list>
-				<ref bean="manager1Manager"/>
-				<ref bean="manager1Authenticated"/>
-			</list>
-		</property>
-	</bean>
 
-	<bean name="manager1Manager" class="acme.entities.roles.Manager">
-		
-		<property name="userAccount" ref="manager1UserAccount"/>
-	</bean>
-
-	<bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager1UserAccount"/>
-	</bean>
 	
-	
-	<bean name="manager2UserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager2"/>
-		<property name="password" value="manager2"/>
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Manager"/>
-				<property name="surname" value="Two"/>
-				<property name="email" value="manager2@mail.com"/>
-				
-			</bean>
-		</property>
-		<property name="enabled" value="true"/>		
-		<property name="roles">
-			<list>
-				<ref bean="manager2Manager"/>
-				<ref bean="manager2Authenticated"/>
-			</list>
-		</property>
-	</bean>
-
-	<bean name="manager2Manager" class="acme.entities.roles.Manager">
-		
-		<property name="userAccount" ref="manager2UserAccount"/>
-	</bean>
-
-	<bean name="manager2Authenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="manager2UserAccount"/>
-	</bean>
 	
 	
 

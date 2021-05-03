@@ -60,8 +60,6 @@ public class Task extends DomainEntity{
 	@OneToOne(optional=false)
 	protected Manager manager;
 	
-	
-	
 	@Min(0)
 	protected Long executionPeriod;
 	

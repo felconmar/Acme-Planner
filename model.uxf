@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>445</x>
-      <y>230</y>
+      <y>175</y>
       <w>105</w>
       <h>50</h>
     </coordinates>
@@ -22,7 +22,7 @@ ApplicationStatus
     <id>UMLClass</id>
     <coordinates>
       <x>240</x>
-      <y>145</y>
+      <y>90</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -36,7 +36,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>290</x>
-      <y>170</y>
+      <y>115</y>
       <w>15</w>
       <h>60</h>
     </coordinates>
@@ -47,7 +47,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>50</x>
-      <y>110</y>
+      <y>55</y>
       <w>110</w>
       <h>60</h>
     </coordinates>
@@ -67,7 +67,7 @@ bg=orange
     <id>UMLNote</id>
     <coordinates>
       <x>50</x>
-      <y>55</y>
+      <y>0</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -80,7 +80,7 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>100</x>
-      <y>80</y>
+      <y>25</y>
       <w>15</w>
       <h>40</h>
     </coordinates>
@@ -92,7 +92,7 @@ bg=blue</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>395</x>
-      <y>155</y>
+      <y>100</y>
       <w>50</w>
       <h>15</h>
     </coordinates>
@@ -106,7 +106,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>395</x>
-      <y>135</y>
+      <y>80</y>
       <w>50</w>
       <h>15</h>
     </coordinates>
@@ -120,7 +120,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>395</x>
-      <y>175</y>
+      <y>120</y>
       <w>50</w>
       <h>15</h>
     </coordinates>
@@ -134,7 +134,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>355</x>
-      <y>140</y>
+      <y>85</y>
       <w>50</w>
       <h>30</h>
     </coordinates>
@@ -145,7 +145,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>355</x>
-      <y>155</y>
+      <y>100</y>
       <w>50</w>
       <h>15</h>
     </coordinates>
@@ -156,7 +156,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>355</x>
-      <y>155</y>
+      <y>100</y>
       <w>50</w>
       <h>35</h>
     </coordinates>
@@ -167,7 +167,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>200</x>
-      <y>340</y>
+      <y>285</y>
       <w>190</w>
       <h>110</h>
     </coordinates>
@@ -193,7 +193,7 @@ Task
     <id>UMLClass</id>
     <coordinates>
       <x>240</x>
-      <y>220</y>
+      <y>165</y>
       <w>105</w>
       <h>45</h>
     </coordinates>
@@ -207,7 +207,7 @@ Manager
     <id>UMLClass</id>
     <coordinates>
       <x>470</x>
-      <y>135</y>
+      <y>80</y>
       <w>190</w>
       <h>60</h>
     </coordinates>
@@ -224,7 +224,7 @@ Shout
     <id>UMLClass</id>
     <coordinates>
       <x>5</x>
-      <y>245</y>
+      <y>190</y>
       <w>205</w>
       <h>40</h>
     </coordinates>
@@ -238,7 +238,7 @@ Spam
     <id>UMLClass</id>
     <coordinates>
       <x>90</x>
-      <y>310</y>
+      <y>255</y>
       <w>70</w>
       <h>45</h>
     </coordinates>
@@ -254,7 +254,7 @@ Visibility
     <id>UMLClass</id>
     <coordinates>
       <x>35</x>
-      <y>190</y>
+      <y>135</y>
       <w>95</w>
       <h>40</h>
     </coordinates>
@@ -271,7 +271,7 @@ Word
     <id>UMLClass</id>
     <coordinates>
       <x>445</x>
-      <y>305</y>
+      <y>250</y>
       <w>175</w>
       <h>140</h>
     </coordinates>
@@ -299,7 +299,7 @@ Dashboard
     <id>Relation</id>
     <coordinates>
       <x>290</x>
-      <y>260</y>
+      <y>205</y>
       <w>60</w>
       <h>90</h>
     </coordinates>
