@@ -15,7 +15,7 @@ public class SpamComponent {
 		final List<List<String>> composedSpamWords = SpamComponent.getComposedSpamWords(stringSpamWords);
 		final List<String> wordsInput= SpamComponent.formatWordsInput(text);
 		
-		final boolean res = false;
+		
 		int spamCounter = 0;
 		int totalWordsCounter=0;
 

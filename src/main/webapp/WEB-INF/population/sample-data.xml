@@ -43,7 +43,32 @@
     </bean>
     
    
-     
+     <bean name="manager2UserAccount" class="acme.framework.entities.UserAccount">
+        <property name="username" value="manager2"/>
+        <property name="password" value="manager2"/>
+        <property name="identity">
+            <bean class="acme.datatypes.UserIdentity">
+                <property name="name" value="Manager"/>
+                <property name="surname" value="Two"/>
+                <property name="email" value="manager2@mail.com"/>
+            </bean>
+        </property>
+        <property name="enabled" value="true"/>
+        <property name="roles">
+            <list>
+                <ref bean="manager2Manager"/>
+                <ref bean="manager2Authenticated"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean name="manager2Manager" class="acme.entities.roles.Manager">
+        <property name="userAccount" ref="manager2UserAccount"/>
+    </bean>
+
+    <bean name="manager2Authenticated" class="acme.framework.entities.Authenticated">
+        <property name="userAccount" ref="manager2UserAccount"/>
+    </bean>
   
     
 	<!-- Shouts -->
@@ -99,14 +124,14 @@
 	
 	<bean id="shout08" class="acme.entities.shouts.Shout">
 		<property name="author" value="Miguel"/>
-		<property name="text" value="Shoutin'"/>
+		<property name="text" value="shout08"/>
 		<property name="moment" value="2021/05/01 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
 	<bean id="shout09" class="acme.entities.shouts.Shout">
 		<property name="author" value="Miguel"/>
-		<property name="text" value="Shoutin'"/>
+		<property name="text" value="shout09"/>
 		<property name="moment" value="2021/04/03 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
@@ -114,17 +139,40 @@
 		
 	<bean id="shout10" class="acme.entities.shouts.Shout">
 		<property name="author" value="Miguel"/>
-		<property name="text" value="Shoutin'"/>
+		<property name="text" value="shout10"/>
 		<property name="moment" value="2021/04/02 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
 	<bean id="shout11" class="acme.entities.shouts.Shout">
 		<property name="author" value="Miguel"/>
-		<property name="text" value="Shoutin'"/>
+		<property name="text" value="Shout 11"/>
 		<property name="moment" value="2021/04/04 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
+	
+	<bean id="shout12" class="acme.entities.shouts.Shout">
+		<property name="author" value="Miguel"/>
+		<property name="text" value="Shout 12"/>
+		<property name="moment" value="2021/01/04 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+		<bean id="shout13" class="acme.entities.shouts.Shout">
+		<property name="author" value="Miguel"/>
+		<property name="text" value="Shout 13"/>
+		<property name="moment" value="2019/01/04 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+		
+	<bean id="shout14" class="acme.entities.shouts.Shout">
+		<property name="author" value="Vicente"/>
+		<property name="text" value="Shout 14"/>
+		<property name="moment" value="2021/05/03 12:30"/>
+		<property name="info" value="http://www.sample-app.net"/>
+	</bean>
+	
 
 	<!-- TASK's -->
 	
@@ -156,7 +204,7 @@
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="true" />
 		<property name="executionPeriod" value="72" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="manager" ref="manager2Manager"/>
 		
 	</bean>
 	<bean id="task03" class="acme.entities.tasks.Task">
@@ -203,7 +251,7 @@
 		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="false" />
 		<property name="executionPeriod" value="336" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="manager" ref="manager2Manager"/>
 		
 	</bean>
 
@@ -280,7 +328,7 @@
 			value="This is the oldest announcement in the system." />
 		<property name="optionalLink"
 			value="http://www.sample-app.com" />
-		<property name="visibility" value="PRIVATE" />
+		<property name="visibility" value="PUBLIC" />
 		<property name="finished" value="false" />
 		<property name="executionPeriod" value="320" />
 		<property name="manager" ref="manager1Manager"/>
@@ -304,7 +352,7 @@
 	</bean>
 	
 	<bean id="task12" class="acme.entities.tasks.Task">
-		<property name="title" value="Example task 11" />
+		<property name="title" value="Example task 12" />
 		<property name="startDate" value="2021/04/01 00:00" />
 		<property name="endDate" value="2021/05/11 00:00" />
 		<property name="workload" value="19.0" />
@@ -316,8 +364,39 @@
 		<property name="finished" value="true" />
 		<property name="executionPeriod" value="465" />
 		<property name="manager" ref="manager1Manager"/>
-		
 	</bean>
+	
+	<bean id="task13" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 13" />
+		<property name="startDate" value="2021/04/01 00:00" />
+		<property name="endDate" value="2021/05/11 00:00" />
+		<property name="workload" value="19.0" />
+		<property name="description"
+			value="This is the oldest announcement in the system." />
+		<property name="optionalLink"
+			value="http://www.sample-app.com" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="finished" value="false" />
+		<property name="executionPeriod" value="465" />
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	<bean id="task14" class="acme.entities.tasks.Task">
+		<property name="title" value="Example task 14" />
+		<property name="startDate" value="2021/04/01 00:00" />
+		<property name="endDate" value="2021/05/11 00:00" />
+		<property name="workload" value="19.0" />
+		<property name="description"
+			value="This is the oldest announcement in the system." />
+		<property name="optionalLink"
+			value="http://www.sample-app.com" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="finished" value="false" />
+		<property name="executionPeriod" value="465" />
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	
 	<!-- Spam Words-->
 	<bean name="word1" class="acme.entities.words.Word">
 		<property name="word" value="sex"/>
