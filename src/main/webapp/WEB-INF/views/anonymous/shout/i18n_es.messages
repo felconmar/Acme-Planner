@@ -10,9 +10,14 @@
 
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
-anonymous.shout.form.label.text = Información:
+anonymous.shout.form.label.info = Información:
 anonymous.shout.form.button.create = Gritar
 anonymous.shout.form.button.return = Volver
+
+
+anonymous.shout.form.text.error.spam = El texto contiene spam
+anonymous.shout.form.info.error.spam = La información contiene spam
+anonymous.shout.form.author.error.spam = El autor contiene spam
  
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
