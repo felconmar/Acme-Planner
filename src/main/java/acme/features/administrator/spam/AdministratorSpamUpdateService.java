@@ -57,8 +57,6 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 
 		request.unbind(entity, model, "threshold");
 		
-		//model.setAttribute("spamWords", spamWords);
-		
 	}
 
 	@Override

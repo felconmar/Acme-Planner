@@ -31,14 +31,7 @@
 			<acme:print value="${totalNumberOfPublicTasks}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.total-number-of-public-workplans"/>
-		</th>
-		<td>
-			<acme:print value="${totalNumberOfPublicWorkplans}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.total-number-of-private-tasks"/>
@@ -47,14 +40,7 @@
 			<acme:print value="${totalNumberOfPrivateTasks}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.total-number-of-private-workplans"/>
-		</th>
-		<td>
-			<acme:print value="${totalNumberOfPrivateWorkplans}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.total-number-of-finished-tasks"/>
@@ -63,14 +49,7 @@
 			<acme:print value="${totalNumberOfFinishedTasks}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.total-number-of-finished-workplans"/>
-		</th>
-		<td>
-			<acme:print value="${totalNumberOfFinishedWorkplans}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.total-number-of-non-finished-tasks"/>
@@ -79,14 +58,7 @@
 			<acme:print value="${totalNumberOfNonFinishedTasks}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.total-number-of-non-finished-workplans"/>
-		</th>
-		<td>
-			<acme:print value="${totalNumberOfNonFinishedWorkplans}"/>
-		</td>
-	</tr>
+	
 </table>
 <h2>
 	<acme:message code="administrator.dashboard.form.title.execution-period"/>
@@ -101,14 +73,7 @@
 			<acme:print value="${averageTaskExecutionPeriod}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.average-workplan-execution-period"/>
-		</th>
-		<td>
-			<acme:print value="${averageWorkplanExecutionPeriod}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.deviation-task-execution-period"/>
@@ -117,14 +82,7 @@
 			<acme:print value="${deviationTaskExecutionPeriod}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviation-workplan-execution-period"/>
-		</th>
-		<td>
-			<acme:print value="${deviationWorkplanExecutionPeriod}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.maximum-task-execution-period"/>
@@ -133,14 +91,7 @@
 			<acme:print value="${maxTaskExecutionPeriod}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.maximum-workplan-execution-period"/>
-		</th>
-		<td>
-			<acme:print value="${maxWorkplanExecutionPeriod}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.minimum-task-execution-period"/>
@@ -149,14 +100,7 @@
 			<acme:print value="${minTaskExecutionPeriod}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.minimum-workplan-execution-period"/>
-		</th>
-		<td>
-			<acme:print value="${minWorkplanExecutionPeriod}"/>
-		</td>
-	</tr>
+	
 </table>
 <h2>
 	<acme:message code="administrator.dashboard.form.title.task-workload"/>
@@ -171,14 +115,7 @@
 			<acme:print value="${averageTaskWorkload}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.average-workplan-workload"/>
-		</th>
-		<td>
-			<acme:print value="${averageWorkplanWorkload}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.deviation-task-workload"/>
@@ -187,14 +124,7 @@
 			<acme:print value="${deviationTaskWorkload}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviation-workplan-workload"/>
-		</th>
-		<td>
-			<acme:print value="${deviationWorkplanWorkload}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.maximum-task-workload"/>
@@ -203,14 +133,7 @@
 			<acme:print value="${maxTaskWorkload}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.maximum-workplan-workload"/>
-		</th>
-		<td>
-			<acme:print value="${maxWorkplanWorkload}"/>
-		</td>
-	</tr>
+	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.minimum-task-workload"/>
@@ -219,14 +142,7 @@
 			<acme:print value="${minTaskWorkload}"/>
 		</td>
 	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.minimum-workplan-workload"/>
-		</th>
-		<td>
-			<acme:print value="${minWorkplanWorkload}"/>
-		</td>
-	</tr>
+	
 </table>
 
 
