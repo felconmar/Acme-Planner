@@ -80,13 +80,28 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		assert entity.getStartDate().before(entity.getEndDate());
 		
 		final Double threshold = this.spamRepository.findUniqueSpamModule().getThreshold();
 		final List<Word> spamWords= this.wordSpamRepository.findMany();
-		assert !SpamComponent.containSpam(entity.getTitle(),spamWords, threshold);
-		assert !SpamComponent.containSpam(entity.getDescription(),spamWords, threshold);
-		assert !SpamComponent.containSpam(entity.getOptionalLink(),spamWords, threshold);
+	
+		
+		if (!errors.hasErrors("title")) {
+            errors.state(request,!SpamComponent.containSpam(entity.getTitle(),spamWords,threshold) , "title", "manager.task.form.title.error.spam");
+        }
+     if (!errors.hasErrors("description")) {
+            errors.state(request,!SpamComponent.containSpam(entity.getDescription(),spamWords,threshold) , "description", "manager.task.form.description.error.spam");
+        }
+     if (!errors.hasErrors("optionalLink")) {
+            errors.state(request,!SpamComponent.containSpam(entity.getOptionalLink(),spamWords,threshold) , "optionalLink", "manager.task.form.optionalLink.error.spam");
+        }
+     
+     if (!errors.hasErrors("endDate")) {
+         errors.state(request,entity.getStartDate().before(entity.getEndDate()) , "endDate", "manager.task.form.endDate.error");
+     }
+     if (!errors.hasErrors("workload")) {
+         errors.state(request,entity.getWorkload()<=entity.calculateExecutionPeriod() , "workload", "manager.task.form.workload.error");
+     }
+     
 	}
 
 	@Override

@@ -8,4 +8,7 @@
 	<acme:list-column code="anonymous.task.list.label.startDate" path="startDate" width="10%"/>
 	<acme:list-column code="anonymous.task.list.label.endDate" path="endDate" width="10%"/>
 	<acme:list-column code="anonymous.task.list.label.workload" path="workload" width="10%"/>
+	<acme:list-column code="anonymous.task.form.label.visibility" path="visibility" width="10%"/>
+	<acme:list-column code="anonymous.task.form.label.finished" path="finished" width="10%"/>
+
 </acme:list>
