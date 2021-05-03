@@ -54,6 +54,9 @@ public class Task extends DomainEntity{
 	@NotNull
 	protected Boolean finished;
 	
+	/*@NotNull
+	protected Manager manager;*/
+	
 	
 	@Min(0)
 	protected Long executionPeriod;
