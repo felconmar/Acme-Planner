@@ -10,7 +10,7 @@
  
 	<acme:form-submit test="${command == 'create'}"
 		code="authenticated.manager.form.button.create"
-		action="/authenticated/manager/create" />  
+		action="/authenticated/gerente/create" />  
 
 	 
 

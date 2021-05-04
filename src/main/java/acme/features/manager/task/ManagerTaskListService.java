@@ -5,14 +5,14 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Gerente;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class ManagerTaskListService implements AbstractListService<Manager, Task> {
+public class ManagerTaskListService implements AbstractListService<Gerente, Task> {
 	
 	@Autowired
 	ManagerTaskRepository repository;

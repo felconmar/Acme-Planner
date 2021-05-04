@@ -34,7 +34,7 @@
         </property>
     </bean>
 
-    <bean name="manager1Manager" class="acme.entities.roles.Manager">
+    <bean name="manager1Manager" class="acme.entities.roles.Gerente">
         <property name="userAccount" ref="manager1UserAccount"/>
     </bean>
 
@@ -62,7 +62,7 @@
         </property>
     </bean>
 
-    <bean name="manager2Manager" class="acme.entities.roles.Manager">
+    <bean name="manager2Manager" class="acme.entities.roles.Gerente">
         <property name="userAccount" ref="manager2UserAccount"/>
     </bean>
 

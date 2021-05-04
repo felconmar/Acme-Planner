@@ -12,5 +12,5 @@
 	<acme:list-column code="manager.task.form.label.finished" path="finished" width="10%"/>
 </acme:list>
 <acme:form>
-	<acme:form-submit code="master.menu.manager.created-task" action="/manager/task/create" method="get"/>
+	<acme:form-submit code="master.menu.manager.created-task" action="/gerente/task/create" method="get"/>
 </acme:form>

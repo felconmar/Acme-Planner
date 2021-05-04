@@ -3,7 +3,7 @@ package acme.features.manager.task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Gerente;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -11,7 +11,7 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class ManagerTaskShowService implements AbstractShowService<Manager, Task>{
+public class ManagerTaskShowService implements AbstractShowService<Gerente, Task>{
 	@Autowired
 	ManagerTaskRepository repository;
 
@@ -23,7 +23,7 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 		boolean result;
 		int taskId;
 		Task task;
-		Manager manager;
+		Gerente manager;
 		Principal principal;
 
 		taskId = request.getModel().getInteger("id");

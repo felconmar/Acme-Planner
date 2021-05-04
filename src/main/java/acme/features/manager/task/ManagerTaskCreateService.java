@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import acme.components.SpamComponent;
 import acme.components.UtilComponent;
-import acme.entities.roles.Manager;
+import acme.entities.roles.Gerente;
 import acme.entities.tasks.Task;
 import acme.entities.tasks.Visibility;
 import acme.entities.words.Word;
@@ -21,7 +21,7 @@ import acme.framework.components.Request;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class ManagerTaskCreateService implements AbstractCreateService<Manager, Task>{
+public class ManagerTaskCreateService implements AbstractCreateService<Gerente, Task>{
 		
 		// Internal state ---------------------------------------------------------
 
@@ -85,7 +85,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			result.setExecutionPeriod(12l);
 			result.setFinished(true);
 			
-			final Manager manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
+			final Gerente manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
 			result.setManager(manager);
 
 			return result;
@@ -135,7 +135,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			assert request != null;
 			assert entity != null;
 			
-			final Manager manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
+			final Gerente manager= this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
 			entity.setManager(manager);
 			
 			final Boolean finished = false;

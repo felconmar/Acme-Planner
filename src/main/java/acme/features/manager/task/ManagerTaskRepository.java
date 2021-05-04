@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Gerente;
 import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
@@ -23,6 +23,6 @@ public interface ManagerTaskRepository extends AbstractRepository {
 	Task findOneTaskFromId(int id);
 	
 
-	@Query("select m from Manager m where m.id = ?1")
-	Manager findOneManagerById(int id);
+	@Query("select g from Gerente g where g.id = ?1")
+	Gerente findOneManagerById(int id);
 }

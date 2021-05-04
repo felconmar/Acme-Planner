@@ -53,12 +53,12 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.manager"
-			access="hasRole('Manager')">
+			access="hasRole('Gerente')">
 			
 			<acme:menu-suboption code="master.menu.manager.created-task"
-				action="/manager/task/create" />
+				action="/gerente/task/create" />
 			<acme:menu-suboption code="master.menu.manager.listed-task"
-				action="/manager/task/list" />
+				action="/gerente/task/list" />
 		</acme:menu-option>
 
 	</acme:menu-left>
@@ -74,8 +74,8 @@
 			<acme:menu-suboption code="master.menu.user-account.general-data"
 				action="/authenticated/user-account/update" />
 				<acme:menu-suboption code="master.menu.user-account.become-manager"
-				action="/authenticated/manager/create"
-				access="!hasRole('Manager')" />
+				action="/authenticated/gerente/create"
+				access="!hasRole('Gerente')" />
 
 		</acme:menu-option>
 

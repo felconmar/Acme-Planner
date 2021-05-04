@@ -10,8 +10,8 @@
 
 	
 	
-	<definition name="authenticated/manager/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/manager/form.jsp" />
+	<definition name="authenticated/managerRol/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/managerRol/form.jsp" />
 	</definition>
 
 </tiles-definitions>

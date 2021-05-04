@@ -3,7 +3,7 @@ package acme.features.manager.task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Gerente;
 import acme.entities.tasks.Task;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -12,7 +12,7 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, Task>{
+public class ManagerTaskDeleteService implements AbstractDeleteService<Gerente, Task>{
 
 	
 	@Autowired
@@ -24,7 +24,7 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 		boolean result;
 		int taskId;
 		Task task;
-		Manager manager;
+		Gerente manager;
 		Principal principal;
 
 		taskId = request.getModel().getInteger("id");

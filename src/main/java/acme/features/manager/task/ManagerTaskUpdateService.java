@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.SpamComponent;
-import acme.entities.roles.Manager;
+import acme.entities.roles.Gerente;
 import acme.entities.tasks.Task;
 import acme.entities.words.Word;
 import acme.features.administrator.spam.AdministratorSpamRepository;
@@ -21,7 +21,7 @@ import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, Task> {
+public class ManagerTaskUpdateService implements AbstractUpdateService<Gerente, Task> {
 
 	
 	@Autowired
@@ -40,7 +40,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		boolean result;
 		int taskId;
 		Task task;
-		Manager manager;
+		Gerente manager;
 		Principal principal;
 
 		taskId = request.getModel().getInteger("id");

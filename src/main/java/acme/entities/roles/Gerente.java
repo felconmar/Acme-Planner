@@ -19,7 +19,7 @@ import acme.framework.entities.UserRole;
 @Entity
 //@Getter
 //@Setter
-public class Manager extends UserRole {
+public class Gerente extends UserRole {
 
 	
 	protected static final long	serialVersionUID	= 1L;
