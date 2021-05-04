@@ -8,4 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- Rafael Corchuelo (corchu@us.es)
+
+- Vicente Díaz Correa (vicdiacor@alum.us.es)
+
+- Miguel Durán González (migdurgon@alum.us.es)
+
+- Jorge Toledo Vega (jortolhur@alum.us.es)
+
+- Manuel García Marchena (mangarmar17@alum.us.es)
+
+- Félix Conde Marrón (felconmar@alum.us.es)
+
+- Álvaro Gómez Pérez (alvgomper1@alum.us.es)
