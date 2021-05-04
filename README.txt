@@ -13,10 +13,9 @@ Este es el proyecto Acme-Planner, correspondiente a los alumnos del grupo 30 de 
 Ingeniería Informática del Software de la Universidad de Sevilla. Para este proyecto había 
 que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
-GitHub Repository:https://github.com/felconmar/Acme-Planner.git
-GitHub Release:
+GitHub Repository: https://github.com/felconmar/Acme-Planner.git
+GitHub Release: 
 
-PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
 
 INTERPRETACIÓN DEL MÓDULO DE SPAM (Importante leerlo)
 -Consideraremos que una cadena contiene spam cuando el porcentaje de palabras de spam con respecto al total de ese texto (número de palabras spam / total de palabras) supere
@@ -27,3 +26,17 @@ cuando se encuentra escrita en ese orden, sin embargo, por ejemplo "million ligh
 
 CAMBIO DE NIVEL A HACIA EL B
 - A mediados del Sprint decidimos presentarnos al nivel B en lugar del A. EL presupuesto y el workplan han sido adaptados a este cambio, sin embargo, en gitGub hemos decidido dejar sin eliminar las ramas correspondientes a las funcionalidades del A, para que se pueda realizar un mejor seguimiento de todo lo que ha ocurrido en el proyecto. (La rama master no incorpora las funcionalidades A).
+
+Url del proyecto en CleverCloud: http://app-6d351586-2eb2-4953-8aec-7f7f2761b9b5.cleverapps.io/Acme-Planner/master/welcome 
+PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
+
+Credenciales para CleverCloud: correo electrónico -> toledo.utrera@hotmail.com
+                               contraseña -> Acm#3plann3R
+
+Usuarios para navegar por la página:
+
+- Rol de Manager: usuario -> manager1
+                  contraseña -> manager1
+           
+- Rol de Administrador: usuario -> administrator
+                        contraseña -> administrator
