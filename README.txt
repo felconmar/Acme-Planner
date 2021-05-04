@@ -14,7 +14,7 @@ Ingeniería Informática del Software de la Universidad de Sevilla. Para este pr
 que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
 GitHub Repository: https://github.com/felconmar/Acme-Planner.git
-GitHub Release: 
+GitHub Release: https://github.com/felconmar/Acme-Planner/releases/tag/1.0.0
 
 
 INTERPRETACIÓN DEL MÓDULO DE SPAM (Importante leerlo)
