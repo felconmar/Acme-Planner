@@ -27,7 +27,7 @@ cuando se encuentra escrita en ese orden, sin embargo, por ejemplo "million ligh
 CAMBIO DE NIVEL A HACIA EL B
 - A mediados del Sprint decidimos presentarnos al nivel B en lugar del A. EL presupuesto y el workplan han sido adaptados a este cambio, sin embargo, en gitGub hemos decidido dejar sin eliminar las ramas correspondientes a las funcionalidades del A, para que se pueda realizar un mejor seguimiento de todo lo que ha ocurrido en el proyecto. (La rama master no incorpora las funcionalidades A).
 
-Url del proyecto en CleverCloud: http://app-6d351586-2eb2-4953-8aec-7f7f2761b9b5.cleverapps.io/Acme-Planner/master/welcome 
+Url del proyecto en CleverCloud: http://app-812a79d4-b2d0-42d1-a1a9-069917a7af35.cleverapps.io/Acme-Planner 
 PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
 
 Credenciales para CleverCloud: correo electrónico -> toledo.utrera@hotmail.com
