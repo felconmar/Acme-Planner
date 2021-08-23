@@ -8,7 +8,9 @@ import acme.entities.words.Word;
 
 public class SpamComponent {
 	
-	
+	private  SpamComponent() {
+		
+	}
 	
 	public static boolean containSpam(final String text, final List<Word> spamWords, final Double threshold) {
 		final List<String> stringSpamWords= SpamComponent.listWordsToStrings(spamWords);
@@ -18,8 +20,8 @@ public class SpamComponent {
 		
 		int spamCounter = 0;
 		int totalWordsCounter=0;
-
-		for ( int i=0; i<wordsInput.size(); ) { //Comprobamos si se trata de spam simple
+		int i=0;
+		while (i<wordsInput.size()) { //Comprobamos si se trata de una palabra registrada como simple (una sola palabra)
 			final String w = wordsInput.get(i);
 			if(stringSpamWords.contains(w)) {
 				spamCounter++;
@@ -32,7 +34,7 @@ public class SpamComponent {
 				for(int j=0; j<composedSpamWords.size(); j++) {
 					
 					final List<String>composedSpamWord = composedSpamWords.get(j);
-					if(!coincide && wordsInput.size()-i >= composedSpamWord.size()) {
+					if( wordsInput.size()-i >= composedSpamWord.size()) {
 						 coincide = SpamComponent.containSpamRecursive(wordsInput,composedSpamWord,i,0);
 						 if(coincide) {
 							 numIndexAdd=composedSpamWord.size();
@@ -125,7 +127,7 @@ public class SpamComponent {
 
 		final List<String> stringSpamWords= new ArrayList<String>();
 		for(final Word w:wordList) {
-			stringSpamWords.add(w.getWord());
+			stringSpamWords.add(w.getValue());
 		}
 		return stringSpamWords;
 		
