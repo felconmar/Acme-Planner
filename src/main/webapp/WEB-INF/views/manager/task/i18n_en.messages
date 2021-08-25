@@ -35,3 +35,4 @@ manager.task.form.endDate.error= End date can´t be earlier than the start date
 manager.task.form.startDate.error= Start date can´t be in past
 manager.task.form.endDatePast.error= End date can´t be in past
 manager.task.form.workload.error= Workload can´t be bigger than execution period
+manager.task.form.workload.error.max99 = Workload can´t be bigger than 99.00
