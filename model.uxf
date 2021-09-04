@@ -188,7 +188,7 @@ Task
 + optionalLink: String {URL}
 + visibility: Visibility {NonNull}
 + finished: Boolean {NonNull}
-+ /executionPeriod: Long {Min(0)}
++ /executionPeriod: Double{Min(0)}
 
 --
 
