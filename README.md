@@ -27,13 +27,9 @@ GitHub Repository: https://github.com/alvgomper1/Acme-Planner.git
 	- Ir al menú del administrador y pulsar "Shut Down"
 	- Tras realizar esto, el coverage debe aparecer correctamente en Eclipse. Superamos el 60% de cobertura en todas las features
 
-INTERPRETACIÓN DEL MÓDULO DE SPAM (Importante leerlo)
--Consideraremos que una cadena contiene spam cuando el porcentaje de palabras de spam con respecto al total de ese texto (número de palabras spam / total de palabras) supere
-el umbral establecido. Por ejemplo, el texto "viagra mesa azul" tiene un porcentaje de spam del 33.33%. Si el umbral fuera de 10%, lo detectaría como spam.
-- Hemos implementado el spam de tal forma que pueda detectar palabras con espacios incluidos, por ejemplo, la palabra "million dollar" cuenta como una única palabra de spam
-cuando se encuentra escrita en ese orden, sin embargo, por ejemplo "million lights dollar", no se considera spam. Las palabras compuestas registradas como spam cuentan como una única palabra, por ejemplo "million dollar mesa", tendría un porcentaje de spam del 50%, porque "million dollar" se considera una única palabra, puesto que solo provoca spam cuando va en ese orden.
-- Para que funcione el módulo de spam, es necesario hacer un populate initial, para cargar el módulo. De otra forma al acceder al módulo de spam, pues dará error, porque no lo podrá encontrar en la base de datos. Para cargar las palabras de spam, hacer un populate-sample.
-
+- IMPORTANTE LEER NUESTRA INTERPRETACIÓN DEL MÓDULO DE SPAM (Apartado 2 del reporte "Features Model").
+- El atributo "workload" tiene el significado "horas.minutos". Es decir, 1.5 representa "1 hora y 50 minutos".
+- Para satisfacer el requisito de "executionPeriod", hemos creado 2 fechas, una de inicio y otra de fin para las Tasks. No obstante, hemos creado además un nuevo atributo "executionPeriod" que indica la duración en horas entre la fecha de inicio y el fin de la tarea (En este caso, 1.5= 1 hora y 30 minutos) Se usará para saber si un workload entra dentro de la duración de una task. 
 
 Url del proyecto en CleverCloud: https://app-97baeb30-90ef-49e6-8e97-1a2ceb8d961f.cleverapps.io/Acme-Planner
 PARA ACCEDER DE FORMA CORRECTA A LA APLICACIÓN DESPLEGADA EN CLEVERCLOUD HAY QUE PONER AL FINAL DE LA URL "/Acme-Planner/"
