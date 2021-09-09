@@ -7,7 +7,7 @@ purposes.  The copyright owner does not offer any warranties or representations,
 they accept any liabilities with respect to them.
 
 
-Este es el proyecto Acme-Planner D2, correspondiente a los alumnos del grupo 30 de DP2 de 
+Este es el proyecto Acme-Work-Plans D2, correspondiente a los alumnos del grupo 30 de DP2 de 
 Ingeniería Informática del Software de la Universidad de Sevilla. Para este proyecto había 
 que trabajar con un framework especial proporcionado por los profesores de la asignatura.
 
